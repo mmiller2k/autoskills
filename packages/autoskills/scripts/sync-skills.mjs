@@ -407,10 +407,8 @@ const SKIP_DIRS = new Set([
   "example",
 ]);
 
-const SKIP_FILES = new Set(["Archive.zip"]);
-
 function shouldSkipSkillFile(rel) {
-  return SKIP_FILES.has(rel.split("/").pop());
+  return rel.toLowerCase().endsWith(".zip");
 }
 
 function findSkillDir(repoRoot, skillName) {
