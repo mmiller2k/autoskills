@@ -1,5 +1,6 @@
 ---
 name: rails-bug-triage
+license: MIT
 description: >
   Use when investigating a bug, error, or regression in a Ruby on Rails codebase.
   Creates a failing RSpec reproduction test, isolates the broken code path, and
@@ -95,3 +96,7 @@ Quick reference:
 | **refactor-safely** | When the bug sits inside a risky refactor area and behavior must be preserved first |
 | **rails-code-review** | To review the final bug fix for regressions and missing coverage |
 | **rails-architecture-review** | When the bug points to a deeper boundary or orchestration problem |
+
+## Assets
+
+- [assets/examples.md](assets/examples.md)

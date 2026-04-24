@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-04-24T21:13:10.905Z",
+  "generatedAt": "2026-04-24T21:21:13.762Z",
   "reviewer": {
     "model": "gpt-5.4",
     "promptVersion": "1.0.0"
@@ -2761,7 +2761,7 @@
     "azure-ai": {
       "source": "microsoft/github-copilot-for-azure",
       "skillPath": "microsoft/github-copilot-for-azure/azure-ai",
-      "commitSha": "b17b5b1566115c7c7b60126941229b6281c8e582",
+      "commitSha": "d01826fce9dc4139dc52230338a1808ab74bbc86",
       "files": [
         "SKILL.md",
         "references/auth-best-practices.md",
@@ -2778,10 +2778,11 @@
         "references/sdk/azure-ai-vision-imageanalysis-py.md",
         "references/sdk/azure-search-documents-dotnet.md",
         "references/sdk/azure-search-documents-py.md",
-        "references/sdk/azure-search-documents-ts.md"
+        "references/sdk/azure-search-documents-ts.md",
+        "version.json"
       ],
       "sha256": {
-        "SKILL.md": "6c670136a10fd4c63addc8140781286ad8ff41bec399bee516728643391758a5",
+        "SKILL.md": "e40a6b7543ba73c6f6b16eef62f3ef48d3c666447de08ff0dbecf1234135040d",
         "references/auth-best-practices.md": "34f6fe88e2b5819c1a0f24aa3930a060d9504fee68ea4b363f0912a78daa5396",
         "references/sdk/azure-ai-contentsafety-java.md": "69bc81ac571f57270e2ee6c2c6453bc9d93a1b5a72598d8d8406cad74f91409a",
         "references/sdk/azure-ai-contentsafety-py.md": "21f78e6865a6c74ffb405ceeb2f91350e5b5ec24f17d236f8c9a7d996999a01f",
@@ -2796,16 +2797,17 @@
         "references/sdk/azure-ai-vision-imageanalysis-py.md": "ec5e3ecec27ef7b90e3e24acba3b4859ae735d6074c1bc19ea3c007502d81292",
         "references/sdk/azure-search-documents-dotnet.md": "70c91efbd4b10978db2798486b3c55cd93b7e022d6b74c21ef53aecf0b6ea241",
         "references/sdk/azure-search-documents-py.md": "d65d61fe00ed7c54d4163279da7f915613aa94a88b0613801dfb82514f89bc86",
-        "references/sdk/azure-search-documents-ts.md": "69060237239c07d27a7e5bfe24ef146625bf12264a4fdac356e1d5324517837a"
+        "references/sdk/azure-search-documents-ts.md": "69060237239c07d27a7e5bfe24ef146625bf12264a4fdac356e1d5324517837a",
+        "version.json": "6a195defa97943ab8d9ce89a7c35611e4a12c4494aa7bc2d219065e93baade35"
       },
-      "bundleHash": "490f38eed755c573e0b9424562bf64886e1a494e96e43b88dc06f279b1ecad59",
+      "bundleHash": "487f534fcea433b6a80b40debe72371c87b212b70a6d998af78e36e182429297",
       "review": {
         "status": "approved",
         "flags": [],
-        "summary": "review skipped (--no-review)",
+        "summary": "The skill content is on-topic Azure AI guidance with no prompt injection, embedded secrets, suspicious links, or destructive commands.",
         "model": "gpt-5.4",
         "promptVersion": "1.0.0",
-        "reviewedAt": "2026-04-17T22:42:20.090Z"
+        "reviewedAt": "2026-04-24T21:18:21.334Z"
       }
     },
     "azure-diagnostics": {
@@ -2915,7 +2917,7 @@
     "cloudflare": {
       "source": "cloudflare/skills",
       "skillPath": "cloudflare/skills/cloudflare",
-      "commitSha": "0397d7d88fa6ac7517a88389622eb0799e86ded2",
+      "commitSha": "0438a075b419f737eb091d1c91800b7387e3a75f",
       "files": [
         "SKILL.md",
         "references/agents-sdk/README.md",
@@ -3535,11 +3537,11 @@
         "references/workers/frameworks.md": "520538d460fa6a11360163e3ed0725d840946c776feb9e00bd0bafd9f1cff699",
         "references/workers/gotchas.md": "5dc63ee4570e2c4ed3817a5f9318454caf3a1602c91cd1ae334e98486fe3b2c1",
         "references/workers/patterns.md": "f408d6db9c13ef192511b506b7f83b15df1a0e736c9d10215fcc1c0c0b3ba439",
-        "references/workflows/README.md": "a603bc9452912a4367d1bffd3e0bf5e5bd60b6660c6115e712823f8615bba3e0",
-        "references/workflows/api.md": "10f6b0dcf1b5d8d1e4aa572252d1141d998530fc96015615d08354c3e47d6e17",
-        "references/workflows/configuration.md": "3701f2702b265c517668e24e2dd63417a277e7f601cb52623a9a4e1677553756",
-        "references/workflows/gotchas.md": "bef0aade13c64ec34086dcad6f42a880553626da4e6551a11c08b776960dd75e",
-        "references/workflows/patterns.md": "2f08e14f9b7a58a620b221ec028c30be339d905ca89f26f15f5b8214378add1e",
+        "references/workflows/README.md": "46e74e07cd72d650f100c0360bc060da94c899948e8e89f2d5eac215cc2cc615",
+        "references/workflows/api.md": "a91d6cd8713c0a472c560fcfb7c308b2e3883594b1dcb77442769eb06c5716e5",
+        "references/workflows/configuration.md": "3b6b44ded7b2c065658726f55bea95068aa06184b2cf2c1c1929d80e14b316ad",
+        "references/workflows/gotchas.md": "2e810201a6f5b4e96451926abb92ecbdfee8c30650745fdc3d7dd0933b4cc4cb",
+        "references/workflows/patterns.md": "7b39cce4fbe3a7363add0e299276ee9fd68e58855a1c099ad8ae20ffec54ae5b",
         "references/wrangler/README.md": "67bab7fd889e3296fa48f88398f52b44e0e52f159ab1442ecd594059f3f741f1",
         "references/wrangler/api.md": "0872bc513368c167efbf8bc16024140963f44fd2cdc8777cd615b15831997d53",
         "references/wrangler/configuration.md": "25a61168938f398eac23e686ff0558c3b82fc03e4bda43e9a8b856dd02ca2791",
@@ -3552,14 +3554,14 @@
         "references/zaraz/gotchas.md": "30378f48fde6e866780466228a3e698005a9ce23a24188c8ed520195b03eac3e",
         "references/zaraz/patterns.md": "2ea1d00fe81b1e881c00090fd18c96d8c78ebb41fcc55f540b68150320d90d17"
       },
-      "bundleHash": "0adf5220c89bc875e1a16e3ea2f7ffa865248ae6740d419eba1e3b350ccd839d",
+      "bundleHash": "da4a0ac8024248882401e17848856237e063620c7781f47bd89fcdcf72f902b3",
       "review": {
         "status": "approved",
         "flags": [],
-        "summary": "review skipped (--no-review)",
+        "summary": "The skill content is on-topic Cloudflare documentation and examples without prompt injection, embedded secrets, hidden payloads, or destructive commands.",
         "model": "gpt-5.4",
         "promptVersion": "1.0.0",
-        "reviewedAt": "2026-04-17T22:42:29.672Z"
+        "reviewedAt": "2026-04-24T21:19:18.707Z"
       }
     },
     "wrangler": {
@@ -3809,7 +3811,7 @@
     "swiftui-expert-skill": {
       "source": "avdlee/swiftui-agent-skill",
       "skillPath": "avdlee/swiftui-agent-skill/swiftui-expert-skill",
-      "commitSha": "b741777286ee389f26f3f2641aedaec696b31d83",
+      "commitSha": "a5f130a0be5f3fe9da564e33a3b94739be6e18a6",
       "files": [
         "SKILL.md",
         "references/accessibility-patterns.md",
@@ -3832,10 +3834,25 @@
         "references/sheet-navigation-patterns.md",
         "references/state-management.md",
         "references/text-patterns.md",
-        "references/view-structure.md"
+        "references/trace-analysis.md",
+        "references/trace-recording.md",
+        "references/view-structure.md",
+        "scripts/analyze_trace.py",
+        "scripts/instruments_parser/__init__.py",
+        "scripts/instruments_parser/causes.py",
+        "scripts/instruments_parser/correlate.py",
+        "scripts/instruments_parser/events.py",
+        "scripts/instruments_parser/hangs.py",
+        "scripts/instruments_parser/hitches.py",
+        "scripts/instruments_parser/summary.py",
+        "scripts/instruments_parser/swiftui.py",
+        "scripts/instruments_parser/time_profiler.py",
+        "scripts/instruments_parser/xctrace.py",
+        "scripts/instruments_parser/xml_utils.py",
+        "scripts/record_trace.py"
       ],
       "sha256": {
-        "SKILL.md": "da1f3ec25038b63d535fccff929a8d354701ea6abf818420896acbd6dea1a01d",
+        "SKILL.md": "94c3c375764d22ffc7b956f590d997ef32bee781e0e3690580dde01432e9df77",
         "references/accessibility-patterns.md": "bb942dd3b31fa24aa051943a6b7754a2de45a263dda0da3ac9dc2c7ce43b14d2",
         "references/animation-advanced.md": "45f32863f332379d4831ea736f4f2591688eec4125b325ba52bc9311b3202a30",
         "references/animation-basics.md": "5c6e8911c4011d772db061d3438ec07491bf1c467ab87af4d56e21720a189c9f",
@@ -3856,16 +3873,31 @@
         "references/sheet-navigation-patterns.md": "eda4200c089b0baeb77d29a0ad94ed99062a1c79a78fdd7dfa59b00347d701e8",
         "references/state-management.md": "839d5ea42e3281d69c9d0ec3f797c5dd9f7cdf61e3f3cf273b234efbef40eeda",
         "references/text-patterns.md": "58d2fc91e553a67787c31aceee75421836bc1d5085df2562b7c8abd3cbd80a30",
-        "references/view-structure.md": "43f37285d1e60efcb0fc4de1dcdf2cb6c57c87f22a335fc7ca65fd289e27f62b"
+        "references/trace-analysis.md": "085443330ec41ff45dc484c4adbe009def7640ccc1789b2521bf0fafd27897b1",
+        "references/trace-recording.md": "bded408f9133fd3848548f698b19e213a655bb59141df28112bcdc222720712a",
+        "references/view-structure.md": "43f37285d1e60efcb0fc4de1dcdf2cb6c57c87f22a335fc7ca65fd289e27f62b",
+        "scripts/analyze_trace.py": "ec21775df24e72c5dd10332f3792b91b098d9171d1de3ca5e4b2d7648629fa89",
+        "scripts/instruments_parser/__init__.py": "fdf7c99bed236e0fb71524b155be864a00a71af4997d6848c6c33f49fce62861",
+        "scripts/instruments_parser/causes.py": "d1dfcab1761c8522fece210dee48c123d5b6174faf3b9b7736dff5520bcdd300",
+        "scripts/instruments_parser/correlate.py": "c4bd0c6d14cc96e03cf058ae134c661ace6de5d9b95d417e742278a9c86d064b",
+        "scripts/instruments_parser/events.py": "407582dae6a0eb2098a003b6bfeb8d50fd7bdd62f447962e3509e1024fd1c8ca",
+        "scripts/instruments_parser/hangs.py": "a727232d05662d966adc1ab72ccd61bc205db3d0012ceec413187c9ad044a993",
+        "scripts/instruments_parser/hitches.py": "cd3647877ee9a32a8db4f33f667c9abf133483cd8ad0be91690a2cb6a0e8caf5",
+        "scripts/instruments_parser/summary.py": "dc856a29008aa2218cf30fc82db133f75efc1f67580b27fb3077f17ccc365296",
+        "scripts/instruments_parser/swiftui.py": "3843f884cc549851d43e6abe7fb70320167e3e27db0ada4b25f162c44d0d0fa1",
+        "scripts/instruments_parser/time_profiler.py": "6ba7bb9a4f059fefd4b021ba2a4cff2d82e48fb93ae0dd132950270074bd8ef9",
+        "scripts/instruments_parser/xctrace.py": "2a3cfb97e037feea0bea37a79052497cc31e7c9976f43a83fa39077868704cf5",
+        "scripts/instruments_parser/xml_utils.py": "574d392e601db9adf2204441d4d70cf4d9fea78b9ab286ea43a482ca79541307",
+        "scripts/record_trace.py": "915d97c9f68b3065fe7921a31709e82d299cf113b310e78b855776e9cdde33d3"
       },
-      "bundleHash": "e1f7e79a04d29fb81682c0d1480d6c88bfd779a91ff163a62da4d47ec1272c76",
+      "bundleHash": "7d8c33074db5981173092a081a36686095dac4c5dcf36e18fa95b3d22a763f48",
       "review": {
         "status": "approved",
         "flags": [],
-        "summary": "review skipped (--no-review)",
+        "summary": "The skill content is on-topic SwiftUI guidance and trace tooling usage with no prompt injection, embedded secrets, suspicious URLs, or destructive commands.",
         "model": "gpt-5.4",
         "promptVersion": "1.0.0",
-        "reviewedAt": "2026-04-17T22:42:34.030Z"
+        "reviewedAt": "2026-04-24T21:19:35.365Z"
       }
     },
     "oxlint": {
@@ -3951,21 +3983,21 @@
     "gsap-plugins": {
       "source": "greensock/gsap-skills",
       "skillPath": "greensock/gsap-skills/gsap-plugins",
-      "commitSha": "03d9f0c3dbf91e0b60582b64ed040c8911ca0174",
+      "commitSha": "aed9cfd3277740755f6bfc1155c7aa645403b760",
       "files": [
         "SKILL.md"
       ],
       "sha256": {
-        "SKILL.md": "ef2d7cdaaf066fc00c6eafb567129181c2ce0b2ed3d2ff6c4579165a5a927da3"
+        "SKILL.md": "5838b856c74c07fbc9fa99b6dfd1eee34ea554c3e530c30e0d58014b707d70a4"
       },
-      "bundleHash": "ae219c49ba500a7c10514bcaf661a4eaaafad5c239cf746e936f26f2880cc83b",
+      "bundleHash": "0005934f847f9a6b0f510bfd8a74f93d96002ea0f1dbafc3f6e19e6a06e9eb74",
       "review": {
         "status": "approved",
         "flags": [],
-        "summary": "review skipped (--no-review)",
+        "summary": "The skill content is on-topic GSAP plugin guidance with no prompt injection, secrets, suspicious links, or destructive commands.",
         "model": "gpt-5.4",
         "promptVersion": "1.0.0",
-        "reviewedAt": "2026-04-17T22:42:36.071Z"
+        "reviewedAt": "2026-04-24T21:19:43.049Z"
       }
     },
     "gsap-timeline": {
@@ -4011,21 +4043,21 @@
     "gsap-frameworks": {
       "source": "greensock/gsap-skills",
       "skillPath": "greensock/gsap-skills/gsap-frameworks",
-      "commitSha": "03d9f0c3dbf91e0b60582b64ed040c8911ca0174",
+      "commitSha": "aed9cfd3277740755f6bfc1155c7aa645403b760",
       "files": [
         "SKILL.md"
       ],
       "sha256": {
-        "SKILL.md": "1e14f96aa6cfeb4d9d2d756f2272ca85e39bd576fe8f238ab8f1fcb86a9d5a3d"
+        "SKILL.md": "842d9d3659ec3ddc8abbdc524708f8facf81f468ac25d0577f48c759c4fa31e6"
       },
-      "bundleHash": "243961888e03c93bf03c930dfb2af65eca5ca20beb4400b084852e49b71f1399",
+      "bundleHash": "97f2615815e642f630d472a5ff553b9a17b2c270d0b7962419a620d13a7e4b45",
       "review": {
         "status": "approved",
         "flags": [],
-        "summary": "review skipped (--no-review)",
+        "summary": "The skill is on-topic and contains only standard framework-specific GSAP usage patterns with no prompt injection, secrets, suspicious URLs, or destructive commands.",
         "model": "gpt-5.4",
         "promptVersion": "1.0.0",
-        "reviewedAt": "2026-04-17T22:42:36.072Z"
+        "reviewedAt": "2026-04-24T21:19:44.376Z"
       }
     },
     "gsap-react": {
@@ -5363,21 +5395,21 @@
     "minimal-api-file-upload": {
       "source": "dotnet/skills",
       "skillPath": "dotnet/skills/minimal-api-file-upload",
-      "commitSha": "f46275e64e0f8a82ab0187d0c1f3be273e89de7a",
+      "commitSha": "59c795c896a7fbce1ef7fa6257e8cc6639b1ba7d",
       "files": [
         "SKILL.md"
       ],
       "sha256": {
-        "SKILL.md": "76863bbaf228992b990d442eb031fe2954c63578ffdde046a76b152b60e47a6e"
+        "SKILL.md": "18232bea3b8bdfdc6b9cc3a2081e193b923150431b90d7c033f57943a96af21e"
       },
-      "bundleHash": "2093820cf7aecd2dc632b488d88b97441f60c2bd3dcb8c95627bf360e2e57524",
+      "bundleHash": "0bf3dff70a452328f77f4b6217d5e7437700fc55a70ccff26fb577306e9e9eeb",
       "review": {
         "status": "approved",
         "flags": [],
-        "summary": "review skipped (--no-review)",
+        "summary": "The skill is on-topic and provides secure file upload guidance without prompt injection, secrets, suspicious links, or destructive commands.",
         "model": "gpt-5.4",
         "promptVersion": "1.0.0",
-        "reviewedAt": "2026-04-17T22:43:55.880Z"
+        "reviewedAt": "2026-04-24T21:20:20.575Z"
       }
     },
     "rust-best-practices": {
@@ -5633,195 +5665,227 @@
     "rails-stack-conventions": {
       "source": "igmarin/rails-agent-skills",
       "skillPath": "igmarin/rails-agent-skills/rails-stack-conventions",
-      "commitSha": "a255cff5410331ebef355908b303d4fa955d8ba9",
+      "commitSha": "96f35ddbae8bf6f07077da570a72fc3eafbb1bdb",
       "files": [
-        "SKILL.md"
+        "SKILL.md",
+        "assets/snippets/eager_loading.rb",
+        "assets/snippets/n_plus_one_fix_example.rb",
+        "assets/snippets/service_object.rb",
+        "assets/snippets/stimulus_controller.js",
+        "assets/snippets/tailwind_component.html.erb",
+        "assets/snippets/turbo_frame.html.erb"
       ],
       "sha256": {
-        "SKILL.md": "a895c2e2e29f71dce503f7ac612cc6a5e675a1786f9b9756c07db7ae1e0b78a2"
+        "SKILL.md": "cdab662e84ffd17f14083d96763bc6d303b9c6c68e8c3e3130a6508c83b4f6be",
+        "assets/snippets/eager_loading.rb": "ff0463db3d38fe7f7694af39b767115e2b4dd9820fb0bae48faa5905fa11e586",
+        "assets/snippets/n_plus_one_fix_example.rb": "659578cc504bb8e41cbc45c8d92e91d6387c82635cbe0e3f403555a2f09bf475",
+        "assets/snippets/service_object.rb": "c34ed2a479297e7cac3db5ed3411227f0cb95ed8194537858edd2c786754043e",
+        "assets/snippets/stimulus_controller.js": "1851bb33bf433824625b87cb5587de9e49c3ddd90a2c8ea1810dc44b5487834e",
+        "assets/snippets/tailwind_component.html.erb": "5c8e5fb036859849178b38642c70f7c2147c0cbb7a01f6f415b0364eb16d92f5",
+        "assets/snippets/turbo_frame.html.erb": "5f7cbbc810266f8fc30575f33b7c78530969d79778ce8cd55c469f35df21a3b2"
       },
-      "bundleHash": "114f373970e34461e859a5f3054b15b73c7634e1810bfc3452a30e46054ac03a",
+      "bundleHash": "4280508bbcea648881be3f7fce18be0b2ab61e71d8e6e77e4852a06409bf0d10",
       "review": {
         "status": "approved",
         "flags": [],
-        "summary": "review skipped (--no-review)",
+        "summary": "This skill is on-topic and contains standard Rails/Hotwire/Tailwind conventions without prompt injection, secrets, suspicious links, or dangerous commands.",
         "model": "gpt-5.4",
         "promptVersion": "1.0.0",
-        "reviewedAt": "2026-04-17T22:44:00.030Z"
+        "reviewedAt": "2026-04-24T21:20:34.588Z"
       }
     },
     "rails-code-review": {
       "source": "igmarin/rails-agent-skills",
       "skillPath": "igmarin/rails-agent-skills/rails-code-review",
-      "commitSha": "a255cff5410331ebef355908b303d4fa955d8ba9",
+      "commitSha": "96f35ddbae8bf6f07077da570a72fc3eafbb1bdb",
       "files": [
         "REVIEW_CHECKLIST.md",
-        "SKILL.md"
+        "SKILL.md",
+        "assets/checklist.md",
+        "assets/examples.md"
       ],
       "sha256": {
         "REVIEW_CHECKLIST.md": "3fc46233950f3cc3da007e2dd5f536f749c2368817a82c2b78f744621b9e4ab5",
-        "SKILL.md": "a86639fe5dd42c8de8e378b10202b208c320ae0065850d04ccb81ed06d8e2932"
+        "SKILL.md": "931ce920232ac57ac666639af21f2fe0579c6b3ff191e1265de6b67c779b8210",
+        "assets/checklist.md": "195195a708b042517856cfa8b762f2361b81de2718467ab067a3db59484c302f",
+        "assets/examples.md": "0f643661c6dc2733344f5a8f9d1fd14c1a2ea7fad454714d0919c226908e7427"
       },
-      "bundleHash": "de5e03456956cfe90065b7ab7639de7dd1f40f7f6a251fced83132ec9d9b5afc",
+      "bundleHash": "0217e7aa9c6bc14ae8efbef9788d6498cedc776ffb9888e5a827c0d80725b9ea",
       "review": {
         "status": "approved",
         "flags": [],
-        "summary": "review skipped (--no-review)",
+        "summary": "Rails code review guidance is on-topic and contains no prompt injection, secrets, suspicious links, or destructive commands.",
         "model": "gpt-5.4",
         "promptVersion": "1.0.0",
-        "reviewedAt": "2026-04-17T22:44:00.031Z"
+        "reviewedAt": "2026-04-24T21:20:35.878Z"
       }
     },
     "rails-migration-safety": {
       "source": "igmarin/rails-agent-skills",
       "skillPath": "igmarin/rails-agent-skills/rails-migration-safety",
-      "commitSha": "a255cff5410331ebef355908b303d4fa955d8ba9",
+      "commitSha": "96f35ddbae8bf6f07077da570a72fc3eafbb1bdb",
       "files": [
         "PATTERNS.md",
         "SKILL.md"
       ],
       "sha256": {
         "PATTERNS.md": "ce724519dcf6b63084b701d6e334d59516b1e8a35dfa0d56db24fafabbdc76a4",
-        "SKILL.md": "16a22c9a035a03aa1e8667f7b51fe049109edebfb702fcce60efd16851f384a1"
+        "SKILL.md": "f82f2ba2a243822dfcb323e4ca079136717390f456f61580e87e761ec95316b6"
       },
-      "bundleHash": "8ffd3ce2563417de1ef0bd1584156be5a8d298278347dc38387065929a466ec5",
+      "bundleHash": "dec88aee2f58e4bfea4d31137d5b506a677a3678b195b91b3face4c849eea45d",
       "review": {
         "status": "approved",
         "flags": [],
-        "summary": "review skipped (--no-review)",
+        "summary": "The skill content is on-topic and provides safe Rails migration guidance without prompt injection, secrets, suspicious links, or destructive commands.",
         "model": "gpt-5.4",
         "promptVersion": "1.0.0",
-        "reviewedAt": "2026-04-17T22:44:00.033Z"
+        "reviewedAt": "2026-04-24T21:20:37.158Z"
       }
     },
     "rails-security-review": {
       "source": "igmarin/rails-agent-skills",
       "skillPath": "igmarin/rails-agent-skills/rails-security-review",
-      "commitSha": "a255cff5410331ebef355908b303d4fa955d8ba9",
+      "commitSha": "96f35ddbae8bf6f07077da570a72fc3eafbb1bdb",
       "files": [
         "PITFALLS.md",
         "SKILL.md"
       ],
       "sha256": {
         "PITFALLS.md": "ee3cf597d191b8e90abae338cac895e230f4f1c7d902d1c835059fca580914b5",
-        "SKILL.md": "a54c30c59d4b93ca50a403c249643cd7beec04d0754d94ed5d23404dd42343d2"
+        "SKILL.md": "23cfe891c08d62cd654677a9b484305683aee3e59b2425929b1ce786fbb4cb0d"
       },
-      "bundleHash": "3463417717d8d3b9d31a68fc01564a5b8f30b686aceb680dc6666b4d58bc420e",
+      "bundleHash": "93abb5b25aa63cc618076f3f8e221584f6eebccc8b2f1234029bd9636656615a",
       "review": {
         "status": "approved",
         "flags": [],
-        "summary": "review skipped (--no-review)",
+        "summary": "The skill content is on-topic and contains no prompt injection, secrets, suspicious URLs, hidden content, or destructive commands.",
         "model": "gpt-5.4",
         "promptVersion": "1.0.0",
-        "reviewedAt": "2026-04-17T22:44:00.034Z"
+        "reviewedAt": "2026-04-24T21:20:38.993Z"
       }
     },
     "rails-background-jobs": {
       "source": "igmarin/rails-agent-skills",
       "skillPath": "igmarin/rails-agent-skills/rails-background-jobs",
-      "commitSha": "a255cff5410331ebef355908b303d4fa955d8ba9",
+      "commitSha": "96f35ddbae8bf6f07077da570a72fc3eafbb1bdb",
       "files": [
         "BACKENDS.md",
-        "SKILL.md"
+        "SKILL.md",
+        "assets/job_patterns.md",
+        "assets/retry_examples.md"
       ],
       "sha256": {
         "BACKENDS.md": "7632bf108d71dd31b18a29a9104e743db7bba8dc5e6a11388a1d20755c5d3312",
-        "SKILL.md": "49b6d4b4d51500babffb764c741a90abd4ad13c865ec15dad3f6624f9286582d"
+        "SKILL.md": "280b5cca693319c1f0b35dabf66352ec592f09c42e130f1ebbecd2bb697546d2",
+        "assets/job_patterns.md": "3bd920d1a52b244c9e72f54f2fbcf7a2f9287117c2ab9cdbffbfd26486fc6bf5",
+        "assets/retry_examples.md": "0199c57c7c7cdf0616cebe3ba97e1e26f42f087d802777ef756cc386fcb4bb61"
       },
-      "bundleHash": "de3e8d1868925d86283c9c238b5595b37b259e5fc33bf81aa4486cd225913265",
+      "bundleHash": "ea20895015eac0bb9af1414ed3baff32b814d1c19cce92bcfb5efe4ed6c59361",
       "review": {
         "status": "approved",
         "flags": [],
-        "summary": "review skipped (--no-review)",
+        "summary": "The skill content is on-topic Rails background job guidance and contains no prompt injection, secrets, suspicious URLs, or destructive commands.",
         "model": "gpt-5.4",
         "promptVersion": "1.0.0",
-        "reviewedAt": "2026-04-17T22:44:00.035Z"
+        "reviewedAt": "2026-04-24T21:20:40.565Z"
       }
     },
     "rspec-best-practices": {
       "source": "igmarin/rails-agent-skills",
       "skillPath": "igmarin/rails-agent-skills/rspec-best-practices",
-      "commitSha": "a255cff5410331ebef355908b303d4fa955d8ba9",
+      "commitSha": "96f35ddbae8bf6f07077da570a72fc3eafbb1bdb",
       "files": [
         "EXAMPLES.md",
-        "SKILL.md"
+        "SKILL.md",
+        "assets/spec_templates.md"
       ],
       "sha256": {
-        "EXAMPLES.md": "af8bf54824b1e04abfc39176d6a704eb9d84e5323f230f36418ba96111439614",
-        "SKILL.md": "a9775a1d908714f9d741ecf3da158d453bc650145cd13214b45dd5805bfc33c4"
+        "EXAMPLES.md": "09f3135681b9cb4e0945df02eccd31ad1ac817e95e349d39ad639946c3a471dc",
+        "SKILL.md": "b176949799e3cfc624b209730c191de9e9800d9da116d29eca54796c763f05cf",
+        "assets/spec_templates.md": "987c2a4842546917c5d5de402613ff38cbd1367019811f2c9184a6115a4eb877"
       },
-      "bundleHash": "8eb377e8cdd15da3e16f5a343f3585d78cd1403445db9dfd08bac66f8581b499",
+      "bundleHash": "7e05ce8100fb727068781826af00eaaa00f5d8d754484a9b04c639cd11ff60d9",
       "review": {
         "status": "approved",
         "flags": [],
-        "summary": "review skipped (--no-review)",
+        "summary": "The skill content is on-topic RSpec guidance with no prompt injection, secrets, suspicious URLs, or destructive commands.",
         "model": "gpt-5.4",
         "promptVersion": "1.0.0",
-        "reviewedAt": "2026-04-17T22:44:00.037Z"
+        "reviewedAt": "2026-04-24T21:20:41.883Z"
       }
     },
     "rspec-service-testing": {
       "source": "igmarin/rails-agent-skills",
       "skillPath": "igmarin/rails-agent-skills/rspec-service-testing",
-      "commitSha": "a255cff5410331ebef355908b303d4fa955d8ba9",
+      "commitSha": "96f35ddbae8bf6f07077da570a72fc3eafbb1bdb",
       "files": [
         "PATTERNS.md",
-        "SKILL.md"
+        "SKILL.md",
+        "assets/spec_examples.md",
+        "assets/testing_checklist.md"
       ],
       "sha256": {
         "PATTERNS.md": "013baeb33461d61313a90ba0c740e6f0655df40b4d31699346184170aa164421",
-        "SKILL.md": "b16479e4cf81e391f799030ae6a6c5ade179ffd8cda5b47f455ddec69ba31dab"
+        "SKILL.md": "3c4a73a2a72579989973af9702583c0a909cf1f0ddbd8975ca63b98791eea4f5",
+        "assets/spec_examples.md": "8e6b57cae1b5aac6853c1161028c8a644522ed987a15162ed37db67bd01f825f",
+        "assets/testing_checklist.md": "4c5a0bb4f3952bebb5c5d07e2aee61372aeb122db32aac2704a60a34bfb24aa6"
       },
-      "bundleHash": "e2c0d8f236616a10d6060d06ad0c6b9357801c8c3b973fbb8f3749431341eea9",
+      "bundleHash": "5d73a700eeca5bdf27c8fe0a6ce1dcdbfcf3cc1cb9ab162170881639675a54b1",
       "review": {
         "status": "approved",
         "flags": [],
-        "summary": "review skipped (--no-review)",
+        "summary": "The skill content is on-topic RSpec testing guidance with no prompt injection, secrets, suspicious URLs, or destructive commands.",
         "model": "gpt-5.4",
         "promptVersion": "1.0.0",
-        "reviewedAt": "2026-04-17T22:44:00.038Z"
+        "reviewedAt": "2026-04-24T21:20:43.090Z"
       }
     },
     "rails-tdd-slices": {
       "source": "igmarin/rails-agent-skills",
       "skillPath": "igmarin/rails-agent-skills/rails-tdd-slices",
-      "commitSha": "a255cff5410331ebef355908b303d4fa955d8ba9",
+      "commitSha": "96f35ddbae8bf6f07077da570a72fc3eafbb1bdb",
       "files": [
         "SKILL.md"
       ],
       "sha256": {
-        "SKILL.md": "49a4d00bd25f81ad3937a12117278f6bd2817fdb244790023a4167788959ba50"
+        "SKILL.md": "766f0966a9590922aa91ddbb959bf79903525322de7e88e6f0314a04dcb62eec"
       },
-      "bundleHash": "eb0a5bf79c493cef00d73adef39cddd7506cef841f65d97d7085d969e0e7cf87",
+      "bundleHash": "8b37a95f36ce248a3a624c46e48c804e1a8aa99613c811b03e2d2ed3cbee312c",
       "review": {
         "status": "approved",
         "flags": [],
-        "summary": "review skipped (--no-review)",
+        "summary": "The skill content is on-topic TDD guidance with no prompt injection, secrets, suspicious links, or dangerous commands.",
         "model": "gpt-5.4",
         "promptVersion": "1.0.0",
-        "reviewedAt": "2026-04-17T22:44:00.039Z"
+        "reviewedAt": "2026-04-24T21:20:44.570Z"
       }
     },
     "rails-bug-triage": {
       "source": "igmarin/rails-agent-skills",
       "skillPath": "igmarin/rails-agent-skills/rails-bug-triage",
-      "commitSha": "a255cff5410331ebef355908b303d4fa955d8ba9",
+      "commitSha": "96f35ddbae8bf6f07077da570a72fc3eafbb1bdb",
       "files": [
         "BOUNDARY_GUIDE.md",
-        "SKILL.md"
+        "SKILL.md",
+        "assets/examples.md",
+        "assets/spec-skeletons/reproduction_spec.rb",
+        "assets/triage_schema.json"
       ],
       "sha256": {
         "BOUNDARY_GUIDE.md": "7f7aa49216b86e0aca3325be948e99d94a5f156046425184b9eb30bcf182c416",
-        "SKILL.md": "b8d7420578a043cf632b520517ab524ba3a4b9979fda825f00a9128e031deaad"
+        "SKILL.md": "08a81e55e77be86cfe720c22ef7f588e2ad27a8ce9c0e373fe6693e8fb7a1093",
+        "assets/examples.md": "dbb7730b2a55c819dc7172994abe76c731ed85c739a7f3af7d8a2b1febddf465",
+        "assets/spec-skeletons/reproduction_spec.rb": "6dfeee8fe599c0a7252598951d9f0ca424b509466574eee9994817cd425f1373",
+        "assets/triage_schema.json": "7a12285b2633cc5e6544c765d99efa8612e80992c32580c6a18e5320fbb35979"
       },
-      "bundleHash": "1427c989f83e816bb5c889d92cc6f3313dad71a2d90333e1af689a2866e7089a",
+      "bundleHash": "9c6a1d9b4c5f50ade31c0b6980474231c0528723eaee0bdb219a02bf7aeb62dd",
       "review": {
         "status": "approved",
         "flags": [],
-        "summary": "review skipped (--no-review)",
+        "summary": "The skill content is on-topic Rails triage guidance and contains no prompt injection, secrets, suspicious URLs, or destructive commands.",
         "model": "gpt-5.4",
         "promptVersion": "1.0.0",
-        "reviewedAt": "2026-04-17T22:44:00.040Z"
+        "reviewedAt": "2026-04-24T21:20:46.782Z"
       }
     },
     "rails-upgrade": {
@@ -11173,21 +11237,21 @@
     "dart-best-practices": {
       "source": "kevmoo/dash_skills",
       "skillPath": "kevmoo/dash_skills/dart-best-practices",
-      "commitSha": "56b9b7eaec235710daedd391672b1c55e25bfb3e",
+      "commitSha": "e56fe5d8f12561bf00f82db8d50c85667b5b57ea",
       "files": [
         "SKILL.md"
       ],
       "sha256": {
-        "SKILL.md": "e3a42a22e4565ab515b06bb778f42e9798adbdec47391fbceac04f08959a4a9f"
+        "SKILL.md": "44e7604bb01f26927bb73d96204b8077fbb2340a05c4b8ba13892e0d8a7c4090"
       },
-      "bundleHash": "f1c2f739bbc00b078ecb404c5cbf06c73b6cc4c2fc1893bcf20f71f356992e8e",
+      "bundleHash": "37da3773e51308a56bfc011659ba609b658be3308f9282b4e4d028da88bdeba2",
       "review": {
         "status": "approved",
         "flags": [],
-        "summary": "review skipped (--no-review)",
+        "summary": "The skill is on-topic and contains no prompt injection, secrets, suspicious links, or dangerous commands.",
         "model": "gpt-5.4",
         "promptVersion": "1.0.0",
-        "reviewedAt": "2026-04-18T04:02:31.056Z"
+        "reviewedAt": "2026-04-24T21:17:39.724Z"
       }
     },
     "remotion": {

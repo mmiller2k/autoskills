@@ -1,5 +1,6 @@
 ---
 name: rails-background-jobs
+license: MIT
 description: >
   Use when adding or reviewing background jobs in Rails. Configures Active Job
   workers, implements idempotency checks, sets up retry/discard strategies,
@@ -145,3 +146,8 @@ Before calling the job done:
 | **rails-security-review** | Jobs receive serialized input; validate like any entry point |
 | **rspec-best-practices** | TDD gate: write job spec before implementation; use `perform_enqueued_jobs` |
 | **ruby-service-objects** | Keep `perform` thin; call service objects for business logic |
+
+## Assets
+
+- [assets/job_patterns.md](assets/job_patterns.md)
+- [assets/retry_examples.md](assets/retry_examples.md)
