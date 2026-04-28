@@ -151,6 +151,8 @@ interface InstallOptions {
   registryDir?: string;
   registryBaseUrl?: string;
   fetchImpl?: typeof fetch;
+  verbose?: boolean;
+  onTrace?: (message: string) => void;
 }
 
 function relPathFromTo(from: string, to: string): string {
@@ -220,7 +222,7 @@ async function downloadRegistryFile(
   entry: RegistryEntry,
   rel: string,
   opts: InstallOptions,
-): Promise<Buffer> {
+): Promise<{ buf: Buffer; url: string }> {
   if (isDisallowedSkillFile(rel)) {
     throw new Error(`refusing to download disallowed skill archive: ${rel}`);
   }
@@ -234,6 +236,7 @@ async function downloadRegistryFile(
   const errors = [];
   for (const baseUrl of getRegistryRawBaseUrls(opts)) {
     const url = `${baseUrl}/${encodeRawPath(skillName, rel)}`;
+    opts.onTrace?.(`GET ${url}`);
     const res = await fetchFile(url, {
       headers: githubDownloadHeaders(url),
     });
@@ -246,6 +249,7 @@ async function downloadRegistryFile(
         );
       }
       errors.push(`${res.status} ${res.statusText} from ${baseUrl}`);
+      opts.onTrace?.(`miss ${rel}: ${res.status} ${res.statusText} from ${baseUrl}`);
       continue;
     }
 
@@ -253,9 +257,11 @@ async function downloadRegistryFile(
     const actual = sha256Buffer(buf);
     if (actual !== expected) {
       errors.push(`hash mismatch from ${baseUrl}`);
+      opts.onTrace?.(`hash mismatch for ${rel} from ${baseUrl}`);
       continue;
     }
-    return buf;
+    opts.onTrace?.(`downloaded ${rel} from ${url}`);
+    return { buf, url };
   }
 
   throw new Error(`download failed for ${rel}: ${errors.join("; ")}`);
@@ -269,10 +275,7 @@ async function downloadRegistryEntry(
 ): Promise<void> {
   const files = [];
   for (const rel of entry.files) {
-    files.push({
-      rel,
-      buf: await downloadRegistryFile(skillName, entry, rel, opts),
-    });
+    files.push({ rel, ...(await downloadRegistryFile(skillName, entry, rel, opts)) });
   }
 
   const bundleHash = createHash("sha256")
@@ -293,6 +296,7 @@ async function downloadRegistryEntry(
     mkdirSync(dirname(dest), { recursive: true });
     writeFileSync(dest, buf);
   }
+  opts.onTrace?.(`wrote downloaded bundle to ${destDir}`);
 }
 
 function copyRegistryEntryFromLocal(
@@ -302,11 +306,16 @@ function copyRegistryEntryFromLocal(
   opts: InstallOptions,
 ): boolean {
   const registryDir = getInstallRegistryDir(opts);
+  opts.onTrace?.(`checking local registry: ${join(registryDir, skillName)}`);
   const verdict = verifyRegistryEntry(skillName, entry, registryDir);
-  if (!verdict.ok) return false;
+  if (!verdict.ok) {
+    opts.onTrace?.(`local registry miss: ${verdict.reason}`);
+    return false;
+  }
 
   rmSync(destDir, { recursive: true, force: true });
   copyDir(join(registryDir, skillName), destDir);
+  opts.onTrace?.(`copied from local registry: ${join(registryDir, skillName)}`);
   return true;
 }
 
@@ -314,13 +323,19 @@ function copyRegistryEntryFromCache(
   skillName: string,
   entry: RegistryEntry,
   destDir: string,
+  opts: InstallOptions,
 ): boolean {
   const registryDir = getCacheRegistryDir(entry);
+  opts.onTrace?.(`checking download cache: ${join(registryDir, skillName)}`);
   const verdict = verifyRegistryEntry(skillName, entry, registryDir);
-  if (!verdict.ok) return false;
+  if (!verdict.ok) {
+    opts.onTrace?.(`cache miss: ${verdict.reason}`);
+    return false;
+  }
 
   rmSync(destDir, { recursive: true, force: true });
   copyDir(join(registryDir, skillName), destDir);
+  opts.onTrace?.(`copied from download cache: ${join(registryDir, skillName)}`);
   return true;
 }
 
@@ -331,6 +346,7 @@ async function downloadRegistryEntryToCache(
 ): Promise<string> {
   const registryDir = getCacheRegistryDir(entry);
   const skillDir = join(registryDir, skillName);
+  opts.onTrace?.(`downloading to cache: ${skillDir}`);
   await downloadRegistryEntry(skillName, entry, skillDir, opts);
   return skillDir;
 }
@@ -411,6 +427,7 @@ export async function installSkill(
 
   const { skillName } = parseSkillPath(skillPath);
   if (!skillName) return fail(`invalid skill path: ${skillPath}`);
+  opts.onTrace?.(`resolving ${skillPath}`);
 
   const registry = loadRegistry();
   if (!registry) {
@@ -423,6 +440,7 @@ export async function installSkill(
   if (!entry) {
     return fail(`skill '${skillName}' not found in registry (unaudited).`);
   }
+  opts.onTrace?.(`registry source: ${entry.source} @ ${entry.commitSha}`);
 
   const canonicalDir = join(projectDir, ".agents", "skills", skillName);
   try {
@@ -431,14 +449,20 @@ export async function installSkill(
       entry,
       join(projectDir, ".agents", "skills"),
     );
+    if (installedVerdict.ok) {
+      opts.onTrace?.(`already installed and verified: ${canonicalDir}`);
+    } else {
+      opts.onTrace?.(`installed copy needs refresh: ${installedVerdict.reason}`);
+    }
     if (
       !installedVerdict.ok &&
       !copyRegistryEntryFromLocal(skillName, entry, canonicalDir, opts) &&
-      !copyRegistryEntryFromCache(skillName, entry, canonicalDir)
+      !copyRegistryEntryFromCache(skillName, entry, canonicalDir, opts)
     ) {
       const cachedSkillDir = await downloadRegistryEntryToCache(skillName, entry, opts);
       rmSync(canonicalDir, { recursive: true, force: true });
       copyDir(cachedSkillDir, canonicalDir);
+      opts.onTrace?.(`copied downloaded bundle into ${canonicalDir}`);
     }
   } catch (err) {
     return fail(`download failed: ${(err as Error).message}`);
@@ -456,6 +480,7 @@ export async function installSkill(
     const linkPath = join(projectDir, folder, "skills", skillName);
     try {
       ensureSymlinkTo(canonicalDir, linkPath);
+      opts.onTrace?.(`linked ${linkPath} -> ${canonicalDir}`);
     } catch (err) {
       symlinkErrors.push(`${folder}: ${(err as Error).message}`);
     }
@@ -463,6 +488,7 @@ export async function installSkill(
 
   try {
     updateSkillsLock(projectDir, skillName, entry);
+    opts.onTrace?.(`updated lockfile: ${join(projectDir, "skills-lock.json")}`);
   } catch (err) {
     return fail(`lockfile update failed: ${(err as Error).message}`);
   }
@@ -513,6 +539,7 @@ export async function installAll(
   agents: string[] = [],
   opts: InstallOptions = {},
 ): Promise<InstallAllResult> {
+  if (opts.verbose) return installAllVerbose(skills, agents, opts);
   if (!process.stdout.isTTY) return installAllSimple(skills, agents, opts);
 
   const CONCURRENCY = 6;
@@ -603,6 +630,43 @@ export async function installAll(
   clearInterval(timer);
   render();
   write(SHOW_CURSOR);
+
+  return { installed, failed, errors };
+}
+
+async function installAllVerbose(
+  skills: SkillEntry[],
+  agents: string[] = [],
+  opts: InstallOptions = {},
+): Promise<InstallAllResult> {
+  const sorted = sortByRepo(skills);
+  let installed = 0;
+  let failed = 0;
+  const errors: InstallAllResult["errors"] = [];
+
+  for (const { skill } of sorted) {
+    log(cyan(`   ◆ ${skill}`));
+    const result = await installSkill(skill, agents, {
+      ...opts,
+      onTrace: (message) => log(dim(`     ${message}`)),
+    });
+
+    if (result.success) {
+      log(green(`     ✔ installed`));
+      installed++;
+    } else {
+      log(red(`     ✘ failed`) + dim(` — ${result.output}`));
+      errors.push({
+        name: skill,
+        output: result.output,
+        stderr: result.stderr,
+        exitCode: result.exitCode,
+        command: result.command,
+      });
+      failed++;
+    }
+    log();
+  }
 
   return { installed, failed, errors };
 }

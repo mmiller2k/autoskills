@@ -282,21 +282,38 @@ describe("installSkill", () => {
     ]);
     _setRegistryDir(regDir);
 
-    const result = await installSkill("owner/repo/raw-skill", [], {
-      projectDir,
-      registryDir: join(tmp.path, "manifest-only"),
-      fetchImpl: (async (url: string | URL | Request) => {
-        const href = typeof url === "string" || url instanceof URL ? String(url) : url.url;
-        ok(
-          href.startsWith(
-            `https://raw.githubusercontent.com/midudev/autoskills/v${PACKAGE_VERSION}/`,
-          ),
-        );
-        return fetchFromRegistry(regDir)(url);
-      }) as typeof fetch,
-    });
+    const prevCacheDir = process.env.AUTOSKILLS_CACHE_DIR;
+    process.env.AUTOSKILLS_CACHE_DIR = join(tmp.path, "raw-github-cache");
+    const trace: string[] = [];
+    let result;
+    try {
+      result = await installSkill("owner/repo/raw-skill", [], {
+        projectDir,
+        registryDir: join(tmp.path, "manifest-only"),
+        onTrace: (message) => trace.push(message),
+        fetchImpl: (async (url: string | URL | Request) => {
+          const href = typeof url === "string" || url instanceof URL ? String(url) : url.url;
+          ok(
+            href.startsWith(
+              `https://raw.githubusercontent.com/midudev/autoskills/v${PACKAGE_VERSION}/`,
+            ),
+          );
+          return fetchFromRegistry(regDir)(url);
+        }) as typeof fetch,
+      });
+    } finally {
+      if (prevCacheDir === undefined) delete process.env.AUTOSKILLS_CACHE_DIR;
+      else process.env.AUTOSKILLS_CACHE_DIR = prevCacheDir;
+    }
 
     ok(result.success, result.output);
+    ok(
+      trace.some((line) =>
+        line.includes(
+          `downloaded AGENTS.md from https://raw.githubusercontent.com/midudev/autoskills/v${PACKAGE_VERSION}/packages/autoskills/skills-registry/raw-skill/AGENTS.md`,
+        ),
+      ),
+    );
     equal(
       readFileSync(join(projectDir, ".agents", "skills", "raw-skill", "AGENTS.md"), "utf-8"),
       "# raw",

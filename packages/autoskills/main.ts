@@ -35,6 +35,7 @@ const VERSION: string = (() => {
   }
   return "0.0.0";
 })();
+const ISSUES_URL = "https://github.com/midudev/autoskills/issues";
 
 process.on("SIGINT", () => {
   write(SHOW_CURSOR + "\n");
@@ -87,7 +88,7 @@ function showHelp(): void {
     -y, --yes       Skip confirmation prompt
     --dry-run       Show skills without installing
     --clear-cache   Clear downloaded skills cache
-    -v, --verbose   Show error details on failure
+    -v, --verbose   Show install trace and error details
     -a, --agent     Install for specific IDEs only (e.g. cursor, claude-code)
     -h, --help      Show this help message
 `);
@@ -283,10 +284,11 @@ function printSummary({ installed, failed, errors, elapsed, verbose }: SummaryOp
           log(dim(`       ${reason}`));
         }
       }
+      log();
       if (!verbose) {
-        log();
-        log(dim("   Run with --verbose to see full error details."));
+        log(dim("   Run again with --verbose to see the full error details."));
       }
+      log(dim(`   If it looks like an autoskills bug, please create an issue: ${ISSUES_URL}`));
     }
   }
 
@@ -433,11 +435,13 @@ async function main(): Promise<void> {
   log();
 
   const startTime = Date.now();
-  const { installed, failed, errors } = await installAll(selectedSkills, resolvedAgents);
+  const { installed, failed, errors } = await installAll(selectedSkills, resolvedAgents, {
+    verbose,
+  });
   const elapsed = Date.now() - startTime;
   const claudeCleanup = cleanupClaudeMd(projectDir);
 
-  if (process.stdout.isTTY) {
+  if (process.stdout.isTTY && !verbose) {
     const up = selectedSkills.length + 2;
     write(`\x1b[${up}A\r\x1b[K`);
     log(green("   ◆ ") + bold("Done!"));
