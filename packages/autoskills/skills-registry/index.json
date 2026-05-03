@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-03T15:33:46.085Z",
+  "generatedAt": "2026-05-03T15:50:34.696Z",
   "reviewer": {
     "model": "gpt-5.4",
     "promptVersion": "1.0.0"
@@ -777,7 +777,7 @@
     "angular-developer": {
       "source": "angular/skills",
       "skillPath": "angular/skills/angular-developer",
-      "commitSha": "f954b67ae5b40807c0eef772ccb802b8fe885953",
+      "commitSha": "fbda5f97952419caaefc972331c51e4b9d34ccfe",
       "files": [
         "SKILL.md",
         "references/angular-animations.md",
@@ -800,6 +800,7 @@
         "references/linked-signal.md",
         "references/loading-strategies.md",
         "references/mcp.md",
+        "references/migrations.md",
         "references/navigate-to-routes.md",
         "references/outputs.md",
         "references/reactive-forms.md",
@@ -817,7 +818,7 @@
         "references/testing-fundamentals.md"
       ],
       "sha256": {
-        "SKILL.md": "3b143b75292f39594cba61f592a194fa0e64cac9616df0a58d2017c50c9b52e3",
+        "SKILL.md": "faf49f2c11fb19085ff4cdfc985adc8bf27e888b122e309da6fb00b17b7b1e5b",
         "references/angular-animations.md": "0361278cabc4925807c8a93ebce717f1c8d52d553870ddd8634b1075b0395dbc",
         "references/angular-aria.md": "258262515f0b9f11df3a291c80e6326432b14d3f67109a6ff1592f4c5761a98d",
         "references/cli.md": "b7a5f9f85125659966fe087b623939fe2b89ea5d7cdf53265476adf1666e37d9",
@@ -837,7 +838,8 @@
         "references/inputs.md": "229a6e37f7006a6f3426cc2bc42baa67ecbbab77c343d141e44b10c1bb11de09",
         "references/linked-signal.md": "4971692a36c4d470b5c8efec1a8106418ac28cdc33601e554ecff9dded95d289",
         "references/loading-strategies.md": "fa82c48573532a7f5e3ccf7eaa50dc7a2db1f23a8599638d9c18e023dbd73e2f",
-        "references/mcp.md": "7197d06d79bb57084a5c4ff203ddf9d86a30116dddb103b9d4fc138bf2dd8cb1",
+        "references/mcp.md": "38a5187f1e2e7eb9b20cd1f12d44f74faadeb8f4c71664e7f06b0c2ee65489cd",
+        "references/migrations.md": "47983ed2683dc10f692d254cdca9c97fc13dec9ad099b759f5d31886f3cbaa7a",
         "references/navigate-to-routes.md": "ea3c3d53b5db47b4f8d8b05124330e72bea92fc908d42c06aa7edb9e652b425e",
         "references/outputs.md": "a191f8982d9ac6868023d56c887f362052c4fccc70a89adc8a6bc546f851e5dc",
         "references/reactive-forms.md": "e71118562247c94141dfaca74efd246e38226bf26ffedbd7f3337f1866113283",
@@ -854,14 +856,28 @@
         "references/template-driven-forms.md": "52e83e576b0c6dc05f854e903c4cfda1222bcd55c50ddee07344d1e53d02c1df",
         "references/testing-fundamentals.md": "c19aba15bd188bb6570fb593e0ca06d52ab86b9ef071611ad89aef1fbdd1a45e"
       },
-      "bundleHash": "cddf38a5db23010989f610c8543e1e66268a45940bd5e5489ee50e532c49b438",
+      "bundleHash": "fc045be84cd51d105e4523a555510e3fd465a3e931f9b0049b0dfbdf68775eac",
       "review": {
-        "status": "approved",
-        "flags": [],
-        "summary": "review skipped (--no-review)",
+        "status": "flagged",
+        "flags": [
+          "Broad/unconditional command execution guidance (`ng build`, `ng version`, `npm install`)",
+          "Potentially unsafe package installation guidance in skill instructions",
+          "Minor internal inconsistency/off-topic examples in references"
+        ],
+        "summary": "The skill is largely on-topic and safe, but it contains unconditional command execution and package installation instructions that should be human-reviewed.",
         "model": "gpt-5.4",
         "promptVersion": "1.0.0",
-        "reviewedAt": "2026-04-17T16:30:47.159Z"
+        "reviewedAt": "2026-05-03T15:50:30.156Z"
+      },
+      "securityCheck": {
+        "status": "warning",
+        "findings": [
+          "Broad/unconditional command execution guidance (`ng build`, `ng version`, `npm install`)",
+          "Potentially unsafe package installation guidance in skill instructions",
+          "Minor internal inconsistency/off-topic examples in references"
+        ],
+        "summary": "The skill is largely on-topic and safe, but it contains unconditional command execution and package installation instructions that should be human-reviewed.",
+        "checkedAt": "2026-05-03T15:50:30.156Z"
       }
     },
     "astro": {
@@ -1566,7 +1582,7 @@
     "flutter-animations": {
       "source": "madteacher/mad-agents-skills",
       "skillPath": "madteacher/mad-agents-skills/flutter-animations",
-      "commitSha": "69d260a364033d0846ac0945a6a5f7237705d93b",
+      "commitSha": "2fb67e384c6d91f32025bd96400d33b73f21bdc7",
       "files": [
         "SKILL.md",
         "assets/templates/explicit_animation.dart",
@@ -1581,11 +1597,11 @@
         "references/staggered.md"
       ],
       "sha256": {
-        "SKILL.md": "4d40d458d9e6555c52f606252f1d078b302a08aceffc818e4180259d52c6af5e",
+        "SKILL.md": "4eb286279b302262d36b2e0a5b29bb1eb27a960dfd81ffc2e343473de2c137b6",
         "assets/templates/explicit_animation.dart": "a439652530ffe178176b6c7d94106e145ffe60467c713827b7ce1547845597ad",
-        "assets/templates/hero_transition.dart": "606c0545c74aad2ec110fdec0e99c609e687fc94f449351bfa2f53d5d3a550dc",
+        "assets/templates/hero_transition.dart": "4ccf4178f9c0b544ef493eec047279aa796dbaf2f35cb09a8ecc35769d6eb2bf",
         "assets/templates/implicit_animation.dart": "1d1e694f3be3e3a80b23b08798d5bd3a6de4208e1606c7899c04d7c72360d070",
-        "assets/templates/staggered_animation.dart": "255e0aad1aafeb0b6831ed712dcf336592fcd5f0aec930dd1996d8c55a72edff",
+        "assets/templates/staggered_animation.dart": "9d46f1d78c6bd3404f5bdd8be426cce6cc1267720682f6006455e0b0408c9e8b",
         "references/curves.md": "d883e5659f51cb06a0955f0339301c6701d7843a1b10a5c6b1b3f7524585b8be",
         "references/explicit.md": "a144c0ddb973bb95576168d48b2acf40ea5e04765e28a17ed1f3578b31b09559",
         "references/hero.md": "68507e667b4b261039eed3e6c61fe623032f9f8518f18d7aa9c5448f19349869",
@@ -1593,20 +1609,26 @@
         "references/physics.md": "942b08caf8d4c54822f53925b678ff710b0df6b721a308a8473f4a7e1e1f3e84",
         "references/staggered.md": "ae6a536ca26a38122c83fd9a126e114509b917d06f4e313f2345ebaaf2a9bb21"
       },
-      "bundleHash": "ff6955a4ec2b970ccce808be4dd0cca08056b2b8b303792d1f22b48aa7847dd3",
+      "bundleHash": "bb61dc664754acb797b37ffe2ce2a42212eb7f92eeab575797a05413b2ef134b",
       "review": {
         "status": "approved",
         "flags": [],
-        "summary": "review skipped (--no-review)",
+        "summary": "The skill content is on-topic Flutter animation guidance with no prompt injection, secrets, suspicious URLs, or destructive commands.",
         "model": "gpt-5.4",
         "promptVersion": "1.0.0",
-        "reviewedAt": "2026-04-17T16:31:30.640Z"
+        "reviewedAt": "2026-05-03T15:47:22.239Z"
+      },
+      "securityCheck": {
+        "status": "ok",
+        "findings": [],
+        "summary": "The skill content is on-topic Flutter animation guidance with no prompt injection, secrets, suspicious URLs, or destructive commands.",
+        "checkedAt": "2026-05-03T15:47:22.239Z"
       }
     },
     "flutter-testing": {
       "source": "madteacher/mad-agents-skills",
       "skillPath": "madteacher/mad-agents-skills/flutter-testing",
-      "commitSha": "69d260a364033d0846ac0945a6a5f7237705d93b",
+      "commitSha": "2fb67e384c6d91f32025bd96400d33b73f21bdc7",
       "files": [
         "SKILL.md",
         "references/common-errors.md",
@@ -1614,25 +1636,39 @@
         "references/mocking.md",
         "references/plugin-testing.md",
         "references/unit-testing.md",
-        "references/widget-testing.md"
+        "references/widget-testing.md",
+        "scripts/verify-examples.sh"
       ],
       "sha256": {
-        "SKILL.md": "e4712190c04a6b648c20b1f895cd1dd08b2c27e01ab8dd9e181bce5632dd78ab",
-        "references/common-errors.md": "58e38399e89199275b73d497529d390deabe93d15f1a3716e380ad7c2d0a8b90",
-        "references/integration-testing.md": "5026462abe64fc818d7b3f0dc1f18fdb349600638d98c2ead4811c5fad76bbac",
-        "references/mocking.md": "68172e18dba9aaa76404f1b19ef820de90b0940f97a26551fa5a25876e6c671b",
+        "SKILL.md": "a3ce731b8d2e88c9a6fd6fcf1462393313ed02cdba7d9e14840e8f8229c5b590",
+        "references/common-errors.md": "e1456d85db73763df2d6d4dddbeb5d86ba8fc87d096f04d6ca3f25012b8259ef",
+        "references/integration-testing.md": "affad4aa7e89a2b9a0aeb20159156f95e2b2d26205d5109709959fe2de0f1194",
+        "references/mocking.md": "0261f24b39b97b0b49417388ccf00f10ee0591bc86d06c31213ab8ecee776f09",
         "references/plugin-testing.md": "8fc63723c5c200cdf3d96a492b52ffa15319932239ea1b883ae1eea635368edd",
-        "references/unit-testing.md": "340bbef2c4dec09b25d43cb32a66b7846ca0eb39521d1c95e2ccf98415dcc4c9",
-        "references/widget-testing.md": "097bfe4564cace22db4fd717fd1b3e1cd44f7f334a6a3854c83fb3cff6b41d23"
+        "references/unit-testing.md": "67e1c2df328ddea6ac6d4f708a6c93d863c7d87bfffc682dd45e8f77f8b7722c",
+        "references/widget-testing.md": "18721b96f8897996a2e4e23e810d15aa46ed2620cdced439853df5a2f5307bed",
+        "scripts/verify-examples.sh": "b7ee0a514201382b6155040ce327fe74c6a7be3d1ff7f0d20b82e79612e7db5b"
       },
-      "bundleHash": "544834b3035c2cf24169f52a9ae605b7e7776c1d078b6f76545d5a53d1350dbc",
+      "bundleHash": "9de813d81db8ad38630a28b893494c1ebfe5def0e5d47cfb46c632ea7d2d92e5",
       "review": {
-        "status": "approved",
-        "flags": [],
-        "summary": "review skipped (--no-review)",
+        "status": "flagged",
+        "flags": [
+          "Broad shell commands and script execution should be human-reviewed (`bash flutter-testing/scripts/verify-examples.sh`, `./gradlew`, `xcodebuild`, `flutter drive`).",
+          "Contains some outdated/inconsistent guidance within references (e.g. `tester.takeScreenshot` is forbidden in SKILL.md but screenshots are shown via integration binding methods elsewhere), which merits review for correctness."
+        ],
+        "summary": "The skill is on-topic and contains no clear injection or secrets, but it includes executable commands and a few inconsistent testing instructions that should be double-checked.",
         "model": "gpt-5.4",
         "promptVersion": "1.0.0",
-        "reviewedAt": "2026-04-17T16:31:30.641Z"
+        "reviewedAt": "2026-05-03T15:50:31.522Z"
+      },
+      "securityCheck": {
+        "status": "warning",
+        "findings": [
+          "Broad shell commands and script execution should be human-reviewed (`bash flutter-testing/scripts/verify-examples.sh`, `./gradlew`, `xcodebuild`, `flutter drive`).",
+          "Contains some outdated/inconsistent guidance within references (e.g. `tester.takeScreenshot` is forbidden in SKILL.md but screenshots are shown via integration binding methods elsewhere), which merits review for correctness."
+        ],
+        "summary": "The skill is on-topic and contains no clear injection or secrets, but it includes executable commands and a few inconsistent testing instructions that should be double-checked.",
+        "checkedAt": "2026-05-03T15:50:31.522Z"
       }
     },
     "kotlin-tooling-cocoapods-spm-migration": {
@@ -2631,7 +2667,7 @@
     "turborepo": {
       "source": "vercel/turborepo",
       "skillPath": "vercel/turborepo/turborepo",
-      "commitSha": "70e935397e83f8139f5d34938648f076be6bfdbd",
+      "commitSha": "09900b9151a852a3fa289aee007b03cee1d32288",
       "files": [
         "SKILL.md",
         "command/turborepo.md",
@@ -2661,12 +2697,12 @@
         "references/watch/RULE.md"
       ],
       "sha256": {
-        "SKILL.md": "3cf7556b5ec44506a625a67a36b19d182d26fc14972b8b345f146a0f9e2378f4",
-        "command/turborepo.md": "a85db9121e226f0001e3f78e3521de4893a48c83bdd51546268e609ba3a3275e",
+        "SKILL.md": "049cee6c633918b29502ca53d913741a20f68da9ec81f617cb5d168174f22fe4",
+        "command/turborepo.md": "ad4437d5dd02aa30835c556504ef836f43c29e660d9ed7dd5865b7daf3b8b4fd",
         "references/best-practices/RULE.md": "ab7d339168386107d0a6b9259f2e6586b1526d53975682a08442babfa1b7bb58",
         "references/best-practices/dependencies.md": "422cbba88be554e857fd2bce4bd60983198bfd48e253f8b57ac833741077f3d3",
         "references/best-practices/packages.md": "eb393cfc4e2824612e862db5d30868948952e22c48b9885b20ef43f5d982732e",
-        "references/best-practices/structure.md": "f546ca407fdde495acb020f6c6ee8770f4a946710face11ac1ed02d9a23cddde",
+        "references/best-practices/structure.md": "a63a26d0eb5e37196775b99b1d45ec02e4f4c3abb019360905211520e40db36c",
         "references/boundaries/RULE.md": "70d66f5ba31c0caa788b68b99b8f010eb71d1ab1a55d1d6faec024d4a86afb56",
         "references/caching/RULE.md": "f79ae3c2036472a56de4582116ccca873b40e15341d26470bb24d2b2a6d3f551",
         "references/caching/gotchas.md": "b27acdf3ee955dfc8d00ad68bbea949c78dc7f2c4d3f7c380123840a6fc3fef9",
@@ -2677,31 +2713,37 @@
         "references/ci/vercel.md": "be87a22776dfcd2717aaa21bcb16cc9d2bc1bb5e6640c8659c1cd3068f64b891",
         "references/cli/RULE.md": "7f323ad405086b17fbafa516a9feec597ad94323492954329e9aafb5b51f8e18",
         "references/cli/commands.md": "723ed30b76447b3a52d73811979c4b11c69e6eee50f3ef211fe8779e48c4ba46",
-        "references/configuration/RULE.md": "6e5373e72b36ccbc4d3789823dd28d3cfdb6844fdf5610018b8eaef688b17923",
+        "references/configuration/RULE.md": "8ca259f238da5f8082c35fc8ee819d35b82c22e3d4fbcee65f517c2b0024073d",
         "references/configuration/global-options.md": "50e085885e08c061f23b3b0c480f304fa142f29a8a5dcfdf1b51ec184cef204e",
-        "references/configuration/gotchas.md": "5342e3720c6530ad9306fd21f588317b46083b33ed9d9d6071b6bfa6db74c717",
+        "references/configuration/gotchas.md": "5623c00a9b0ff15fe4e769a7cd5a447d3c4af356fbe053799523353976812d38",
         "references/configuration/tasks.md": "b909cc8802d388195b0f032d57402bdb4e1574c4bc43c212026279684d1825b2",
-        "references/environment/RULE.md": "7a79798a78be8c07d5aa4213c7f46271847d08b8831c45b76abe7c2ed4bdb63a",
-        "references/environment/gotchas.md": "529f466d5ade393a80fd61f41060d353319206bb11b49c01bb6df866956ee525",
+        "references/environment/RULE.md": "cb524d34b26f2705f6eb71342f30058f1e7f3a2f4403ee9c79cf8cc46ef486ed",
+        "references/environment/gotchas.md": "e697a20d81afddadbb88e31c3677a798854f67e41bc10a533e16311ee6fb185a",
         "references/environment/modes.md": "29550669e10f5d84b8208ca44c1877b6ce70c8db9f16aca1fac2d0f19ba4b4eb",
         "references/filtering/RULE.md": "b93549585bf8a266f92929b0f9a7536527954fcee51b9cdfa5cbd63100d6f46b",
         "references/filtering/patterns.md": "c412ffaf156908e773ac1039aaeaf1c1843b43f2e836eb25aa4c66bd84fa22c2",
         "references/watch/RULE.md": "6f39b8c107964882d1646d36beb2c293aed136fa113bb5263d13da282258df81"
       },
-      "bundleHash": "fd27be587062baeba611e0e7d12c6939e6df859cb8984cf7fe4bdc6d6d3dcde1",
+      "bundleHash": "341f67c77a99b473c48207db023503509de7955af1517ce39e17b21a0127d79c",
       "review": {
         "status": "approved",
         "flags": [],
-        "summary": "The skill content is on-topic Turborepo guidance with no prompt injection, embedded secrets, suspicious links, or destructive commands.",
+        "summary": "The Turborepo skill content is on-topic documentation and workflow guidance without prompt injection, embedded secrets, suspicious links, or destructive commands.",
         "model": "gpt-5.4",
         "promptVersion": "1.0.0",
-        "reviewedAt": "2026-04-30T08:52:43.777Z"
+        "reviewedAt": "2026-05-03T15:47:47.205Z"
+      },
+      "securityCheck": {
+        "status": "ok",
+        "findings": [],
+        "summary": "The Turborepo skill content is on-topic documentation and workflow guidance without prompt injection, embedded secrets, suspicious links, or destructive commands.",
+        "checkedAt": "2026-05-03T15:47:47.205Z"
       }
     },
     "azure-deploy": {
       "source": "microsoft/github-copilot-for-azure",
       "skillPath": "microsoft/github-copilot-for-azure/azure-deploy",
-      "commitSha": "d01826fce9dc4139dc52230338a1808ab74bbc86",
+      "commitSha": "771a66600a0ceb096d9779b4f75121dad1e96f72",
       "files": [
         "SKILL.md",
         "references/auth-best-practices.md",
@@ -2751,7 +2793,7 @@
         "references/auth-best-practices.md": "34f6fe88e2b5819c1a0f24aa3930a060d9504fee68ea4b363f0912a78daa5396",
         "references/global-rules.md": "f500e14ef282c4f75787e26f96e9671cdb29ad92c623a9f011ab02ff613622ed",
         "references/live-role-verification.md": "db545be4373ea6a5dec0e14a7283ee12ba3464ec4750a868bdcb33112dac1bdc",
-        "references/pre-deploy-checklist.md": "d2d7cc119027ce726ac725f4b1066b742a5f45edc74b215d657d7b80acf9c2dd",
+        "references/pre-deploy-checklist.md": "b70ad5778684dfdf4a8f3b3b48bc4f3491769c0324579aac0f8a281c9f89497e",
         "references/recipes/README.md": "5c4bd9573a4efaf3bda6c4934a5de01297918b25e008bdf6a98bab912dd0b160",
         "references/recipes/azcli/README.md": "c57a8fec3a71adc46dea653e026f300f7a45f67de544fb6a316b55e4acbda5f9",
         "references/recipes/azcli/errors.md": "75446f81c1df2eb9dd3522023bc5ff98dd75b97542d13075a13fe9673e05c257",
@@ -2790,19 +2832,28 @@
         "references/troubleshooting.md": "c5116670186964d0c44e6c8b9d235408eaf3aa77e90fd71dddc34d1c08d4ede4",
         "version.json": "6a195defa97943ab8d9ce89a7c35611e4a12c4494aa7bc2d219065e93baade35"
       },
-      "bundleHash": "6334818ba5cde438847676fd008d1e4f3b744b486e0638e27f93c7de61588f1d",
+      "bundleHash": "bf8d2ea2e5d52aaa2f3df3ab5f708a889a3f5852715712342eead57e0f38ddc3",
       "review": {
         "status": "flagged",
         "flags": [
-          "dangerous-command",
-          "broad-shell-usage",
-          "uses-eval",
-          "curl-pipe-shell"
+          "destructive_commands_present",
+          "unsafe_shell_pattern_eval",
+          "embedded_credential_handling_guidance"
         ],
-        "summary": "Mostly on-topic Azure deployment guidance, but it includes risky command patterns such as `curl | bash` installation and multiple `eval $(azd env get-values)` examples that should be reviewed.",
+        "summary": "Mostly legitimate Azure deployment guidance, but it includes destructive cleanup commands, repeated use of unsafe `eval $(azd env get-values)`, and instructions to retrieve/use ACR admin credentials that warrant human review.",
         "model": "gpt-5.4",
         "promptVersion": "1.0.0",
-        "reviewedAt": "2026-04-24T21:31:59.389Z"
+        "reviewedAt": "2026-05-03T15:50:32.599Z"
+      },
+      "securityCheck": {
+        "status": "warning",
+        "findings": [
+          "destructive_commands_present",
+          "unsafe_shell_pattern_eval",
+          "embedded_credential_handling_guidance"
+        ],
+        "summary": "Mostly legitimate Azure deployment guidance, but it includes destructive cleanup commands, repeated use of unsafe `eval $(azd env get-values)`, and instructions to retrieve/use ACR admin credentials that warrant human review.",
+        "checkedAt": "2026-05-03T15:50:32.599Z"
       }
     },
     "azure-ai": {
@@ -4394,21 +4445,27 @@
     "nodejs-best-practices": {
       "source": "sickn33/antigravity-awesome-skills",
       "skillPath": "sickn33/antigravity-awesome-skills/nodejs-best-practices",
-      "commitSha": "89714d02f94678092cf951707fa9f4a9c99aeaca",
+      "commitSha": "1930a079452fa15a54b6b4232a89d8a3f75c3239",
       "files": [
         "SKILL.md"
       ],
       "sha256": {
-        "SKILL.md": "e588649daf39c0c8a1a4f5f011a5706a6ee5c53fc1a0e75b165849b260781638"
+        "SKILL.md": "555466f9a68554c1d965f0fbf9b335cf4fa37fff4bce46145a3781a17fc2a17f"
       },
-      "bundleHash": "9dbca8bf122ad4b6d8b6686e05e4e434e00ae1dfa5fa412566ae7ee88780a18f",
+      "bundleHash": "7361ab02fb6b09913e3bdd9cf61c629ed6c17de9485e6a781054e5d437ccfc29",
       "review": {
         "status": "approved",
         "flags": [],
-        "summary": "review skipped (--no-review)",
+        "summary": "Safe, on-topic Node.js guidance focused on architecture, security, and decision-making without secrets, injection, or dangerous commands.",
         "model": "gpt-5.4",
         "promptVersion": "1.0.0",
-        "reviewedAt": "2026-04-17T22:43:08.230Z"
+        "reviewedAt": "2026-05-03T15:48:30.152Z"
+      },
+      "securityCheck": {
+        "status": "ok",
+        "findings": [],
+        "summary": "Safe, on-topic Node.js guidance focused on architecture, security, and decision-making without secrets, injection, or dangerous commands.",
+        "checkedAt": "2026-05-03T15:48:30.152Z"
       }
     },
     "golang-patterns": {
@@ -5380,7 +5437,7 @@
     "stripe-best-practices": {
       "source": "stripe/ai",
       "skillPath": "stripe/ai/stripe-best-practices",
-      "commitSha": "dd6deb03137908d0102ffde97e60c90cf79bf929",
+      "commitSha": "f6e8ff385e15f24cee5986518221228b7dc9ac6d",
       "files": [
         "SKILL.md",
         "references/billing.md",
@@ -5390,41 +5447,59 @@
         "references/treasury.md"
       ],
       "sha256": {
-        "SKILL.md": "0daccd2249dd5e5b9e79a562beed20778d92f598f9790752ad9f9e3fbba2d762",
+        "SKILL.md": "8913a67ca90796b949ca92d7fc3dea9cda197e3c6bbe6fd5f6948236039e9ae8",
         "references/billing.md": "90f15b8a9f27889a8402a1416b171d515b7f48d20e11ef44b3e78c49330a4a91",
         "references/connect.md": "b1b6f960937d17fb98d8968e9e569bf6df33402524bf4c88bc3c2b21298cc0c1",
         "references/payments.md": "87881816f8c3cb9e90c47f8e9c1a79848f29ae70af7ddb09c45da6f3345c64e7",
         "references/security.md": "4353d3556f273e54d55e1e1df60a9a4f631412a80d2c644a89df66313258fb93",
         "references/treasury.md": "ccd38ef29a654b2c59bde4d56e5537af6a89f10a7297ed0b87c3b9e9f2bb8ffa"
       },
-      "bundleHash": "a2b6dc53cf2ff46c53bb3d9f53c82c764600fc66be051c3e3c63e0a9e15e5fa0",
+      "bundleHash": "0ca31a5a3c2631cd0419ba2e186e962773718799d2b281551c0e48195693350f",
       "review": {
         "status": "approved",
         "flags": [],
-        "summary": "review skipped (--no-review)",
+        "summary": "Safe, on-topic Stripe integration guidance with no prompt injection, secrets, suspicious links, or destructive commands.",
         "model": "gpt-5.4",
         "promptVersion": "1.0.0",
-        "reviewedAt": "2026-04-17T22:43:49.691Z"
+        "reviewedAt": "2026-05-03T15:48:43.883Z"
+      },
+      "securityCheck": {
+        "status": "ok",
+        "findings": [],
+        "summary": "Safe, on-topic Stripe integration guidance with no prompt injection, secrets, suspicious links, or destructive commands.",
+        "checkedAt": "2026-05-03T15:48:43.883Z"
       }
     },
     "upgrade-stripe": {
       "source": "stripe/ai",
       "skillPath": "stripe/ai/upgrade-stripe",
-      "commitSha": "dd6deb03137908d0102ffde97e60c90cf79bf929",
+      "commitSha": "f6e8ff385e15f24cee5986518221228b7dc9ac6d",
       "files": [
         "SKILL.md"
       ],
       "sha256": {
-        "SKILL.md": "1af9308cff0bf58a3668c1a3282fc8b5aec93723063ed5e2b7ba67cd6e8be426"
+        "SKILL.md": "150c420efffb9eea65c7950848d5172d77e8f96b2b7bbec20ee76006bae56a32"
       },
-      "bundleHash": "6a8ad5d538c2d791b6c4414c2f9b7801d82488b5bd877458ff504e9372e05767",
+      "bundleHash": "017906619cae467ebfac534bed0dc25d1c157dd55bfb0530fb5d38d2418b426c",
       "review": {
-        "status": "approved",
-        "flags": [],
-        "summary": "review skipped (--no-review)",
+        "status": "flagged",
+        "flags": [
+          "Embedded example secret pattern (`sk_test_xxx`) appears multiple times",
+          "External documentation links should be verified for legitimacy and necessity"
+        ],
+        "summary": "The skill is generally on-topic and safe, but it contains Stripe secret-key-like placeholders and external links that merit a quick human review.",
         "model": "gpt-5.4",
         "promptVersion": "1.0.0",
-        "reviewedAt": "2026-04-17T22:43:49.694Z"
+        "reviewedAt": "2026-05-03T15:50:34.282Z"
+      },
+      "securityCheck": {
+        "status": "warning",
+        "findings": [
+          "Embedded example secret pattern (`sk_test_xxx`) appears multiple times",
+          "External documentation links should be verified for legitimacy and necessity"
+        ],
+        "summary": "The skill is generally on-topic and safe, but it contains Stripe secret-key-like placeholders and external links that merit a quick human review.",
+        "checkedAt": "2026-05-03T15:50:34.282Z"
       }
     },
     "hono": {
@@ -5776,7 +5851,7 @@
     "rails-stack-conventions": {
       "source": "igmarin/rails-agent-skills",
       "skillPath": "igmarin/rails-agent-skills/rails-stack-conventions",
-      "commitSha": "96f35ddbae8bf6f07077da570a72fc3eafbb1bdb",
+      "commitSha": "d22f227b63430f661873c0f6c059b422ef5083b8",
       "files": [
         "SKILL.md",
         "assets/snippets/eager_loading.rb",
@@ -5787,7 +5862,7 @@
         "assets/snippets/turbo_frame.html.erb"
       ],
       "sha256": {
-        "SKILL.md": "cdab662e84ffd17f14083d96763bc6d303b9c6c68e8c3e3130a6508c83b4f6be",
+        "SKILL.md": "a92569e0b4242aec11af14826f63b0e5cf674a94ad214bc663902c7c07eccd8e",
         "assets/snippets/eager_loading.rb": "ff0463db3d38fe7f7694af39b767115e2b4dd9820fb0bae48faa5905fa11e586",
         "assets/snippets/n_plus_one_fix_example.rb": "659578cc504bb8e41cbc45c8d92e91d6387c82635cbe0e3f403555a2f09bf475",
         "assets/snippets/service_object.rb": "c34ed2a479297e7cac3db5ed3411227f0cb95ed8194537858edd2c786754043e",
@@ -5795,20 +5870,26 @@
         "assets/snippets/tailwind_component.html.erb": "5c8e5fb036859849178b38642c70f7c2147c0cbb7a01f6f415b0364eb16d92f5",
         "assets/snippets/turbo_frame.html.erb": "5f7cbbc810266f8fc30575f33b7c78530969d79778ce8cd55c469f35df21a3b2"
       },
-      "bundleHash": "4280508bbcea648881be3f7fce18be0b2ab61e71d8e6e77e4852a06409bf0d10",
+      "bundleHash": "398aafac2767e857a201b989a253a99e956483efbe9dbcfdbcc9810a11b9282c",
       "review": {
         "status": "approved",
         "flags": [],
-        "summary": "This skill is on-topic and contains standard Rails/Hotwire/Tailwind conventions without prompt injection, secrets, suspicious links, or dangerous commands.",
+        "summary": "Safe, on-topic Rails stack conventions with no prompt injection, secrets, suspicious links, or dangerous commands.",
         "model": "gpt-5.4",
         "promptVersion": "1.0.0",
-        "reviewedAt": "2026-04-24T21:20:34.588Z"
+        "reviewedAt": "2026-05-03T15:49:00.642Z"
+      },
+      "securityCheck": {
+        "status": "ok",
+        "findings": [],
+        "summary": "Safe, on-topic Rails stack conventions with no prompt injection, secrets, suspicious links, or dangerous commands.",
+        "checkedAt": "2026-05-03T15:49:00.642Z"
       }
     },
     "rails-code-review": {
       "source": "igmarin/rails-agent-skills",
       "skillPath": "igmarin/rails-agent-skills/rails-code-review",
-      "commitSha": "96f35ddbae8bf6f07077da570a72fc3eafbb1bdb",
+      "commitSha": "d22f227b63430f661873c0f6c059b422ef5083b8",
       "files": [
         "REVIEW_CHECKLIST.md",
         "SKILL.md",
@@ -5817,18 +5898,24 @@
       ],
       "sha256": {
         "REVIEW_CHECKLIST.md": "3fc46233950f3cc3da007e2dd5f536f749c2368817a82c2b78f744621b9e4ab5",
-        "SKILL.md": "931ce920232ac57ac666639af21f2fe0579c6b3ff191e1265de6b67c779b8210",
+        "SKILL.md": "4384c51e026d77038bfe4c9c65fd6fcbbd8fa7f3675fdd2c5b8c7aaeea6af7a5",
         "assets/checklist.md": "195195a708b042517856cfa8b762f2361b81de2718467ab067a3db59484c302f",
         "assets/examples.md": "0f643661c6dc2733344f5a8f9d1fd14c1a2ea7fad454714d0919c226908e7427"
       },
-      "bundleHash": "0217e7aa9c6bc14ae8efbef9788d6498cedc776ffb9888e5a827c0d80725b9ea",
+      "bundleHash": "b0a382f0cdc36d0ae790a4abcd603b8aa0c4d31efa21335a21c548b4527fba86",
       "review": {
         "status": "approved",
         "flags": [],
-        "summary": "Rails code review guidance is on-topic and contains no prompt injection, secrets, suspicious links, or destructive commands.",
+        "summary": "The skill content is on-topic for Rails code review and contains no prompt injection, secrets, suspicious URLs, hidden content, or unconditionally destructive commands.",
         "model": "gpt-5.4",
         "promptVersion": "1.0.0",
-        "reviewedAt": "2026-04-24T21:20:35.878Z"
+        "reviewedAt": "2026-05-03T15:49:02.158Z"
+      },
+      "securityCheck": {
+        "status": "ok",
+        "findings": [],
+        "summary": "The skill content is on-topic for Rails code review and contains no prompt injection, secrets, suspicious URLs, hidden content, or unconditionally destructive commands.",
+        "checkedAt": "2026-05-03T15:49:02.158Z"
       }
     },
     "rails-migration-safety": {
@@ -5928,7 +6015,7 @@
     "rspec-service-testing": {
       "source": "igmarin/rails-agent-skills",
       "skillPath": "igmarin/rails-agent-skills/rspec-service-testing",
-      "commitSha": "96f35ddbae8bf6f07077da570a72fc3eafbb1bdb",
+      "commitSha": "d22f227b63430f661873c0f6c059b422ef5083b8",
       "files": [
         "PATTERNS.md",
         "SKILL.md",
@@ -5937,18 +6024,24 @@
       ],
       "sha256": {
         "PATTERNS.md": "013baeb33461d61313a90ba0c740e6f0655df40b4d31699346184170aa164421",
-        "SKILL.md": "3c4a73a2a72579989973af9702583c0a909cf1f0ddbd8975ca63b98791eea4f5",
+        "SKILL.md": "20fc9499822cce1abd1551fb3b451e9b841bbf7cf509014e6bae73b51044c3c6",
         "assets/spec_examples.md": "8e6b57cae1b5aac6853c1161028c8a644522ed987a15162ed37db67bd01f825f",
         "assets/testing_checklist.md": "4c5a0bb4f3952bebb5c5d07e2aee61372aeb122db32aac2704a60a34bfb24aa6"
       },
-      "bundleHash": "5d73a700eeca5bdf27c8fe0a6ce1dcdbfcf3cc1cb9ab162170881639675a54b1",
+      "bundleHash": "cd89f5ebd76ede51d741e2b53c7583aee068bfe7072d130928b42af81a9825cc",
       "review": {
         "status": "approved",
         "flags": [],
-        "summary": "The skill content is on-topic RSpec testing guidance with no prompt injection, secrets, suspicious URLs, or destructive commands.",
+        "summary": "The skill content is on-topic RSpec testing guidance and contains no prompt injection, secrets, suspicious URLs, or destructive commands.",
         "model": "gpt-5.4",
         "promptVersion": "1.0.0",
-        "reviewedAt": "2026-04-24T21:20:43.090Z"
+        "reviewedAt": "2026-05-03T15:49:03.505Z"
+      },
+      "securityCheck": {
+        "status": "ok",
+        "findings": [],
+        "summary": "The skill content is on-topic RSpec testing guidance and contains no prompt injection, secrets, suspicious URLs, or destructive commands.",
+        "checkedAt": "2026-05-03T15:49:03.505Z"
       }
     },
     "rails-tdd-slices": {
@@ -6002,7 +6095,7 @@
     "rails-upgrade": {
       "source": "ombulabs/claude-code_rails-upgrade-skill",
       "skillPath": "ombulabs/claude-code_rails-upgrade-skill/rails-upgrade",
-      "commitSha": "903cd29bbf0099dc983c23661c5e5757bd811457",
+      "commitSha": "bdecf62dddb14d183a48c3602cb7ecda3b0cb12a",
       "files": [
         "CHANGELOG.md",
         "SKILL.md",
@@ -6010,6 +6103,7 @@
         "detection-scripts/patterns/rails-41-patterns.yml",
         "detection-scripts/patterns/rails-42-patterns.yml",
         "detection-scripts/patterns/rails-50-patterns.yml",
+        "detection-scripts/patterns/rails-51-patterns.yml",
         "detection-scripts/patterns/rails-60-patterns.yml",
         "detection-scripts/patterns/rails-70-patterns.yml",
         "detection-scripts/patterns/rails-71-patterns.yml",
@@ -6042,16 +6136,18 @@
         "workflows/app-update-preview-workflow.md",
         "workflows/ci-sync-workflow.md",
         "workflows/direct-detection-workflow.md",
+        "workflows/gem-compatibility-workflow.md",
         "workflows/test-suite-verification-workflow.md",
         "workflows/upgrade-report-workflow.md"
       ],
       "sha256": {
         "CHANGELOG.md": "97a2ac3f555e4b7c20ce3d794809735ff90203860b0344605fdedfd3910a8a22",
-        "SKILL.md": "83b364016dc41a2d80927b4c974cbfcd7e3ce52c1f57283c9a776d8e2d3cbff3",
+        "SKILL.md": "fa91fac50dfe48342a083d23426a3622de9ba6be81bc70da443a8b8b7a4850ab",
         "detection-scripts/patterns/rails-40-patterns.yml": "1e5826c7e214bb3ace8fbf5630bd32147a1474dc4c6129a9614b53cc0a069402",
         "detection-scripts/patterns/rails-41-patterns.yml": "bbcb5620a0c6df4921adf8ebf85d54b42ece797cef0a4211e52b7da5bd5be04d",
         "detection-scripts/patterns/rails-42-patterns.yml": "9c5352a6af66c624a81907804f3ad17e5e599d6967bcac06052545bc8847e88e",
-        "detection-scripts/patterns/rails-50-patterns.yml": "d2109d2171d2732acae91e7f149497a28c635436936b399bd788e90a1fc1590d",
+        "detection-scripts/patterns/rails-50-patterns.yml": "a22d36a300a05a5518b792da228abf76c989596ff2743b0092cd512ef12812c9",
+        "detection-scripts/patterns/rails-51-patterns.yml": "60881d907ae1981c1f6e34e8d4acbfc01eb594071047b96fc96e240b389412b9",
         "detection-scripts/patterns/rails-60-patterns.yml": "3cf6aee92c9ba527e318e774d13a2ad986db157d28801e1fce06016368f8dbbe",
         "detection-scripts/patterns/rails-70-patterns.yml": "81a16f07c8b2e8f1388a7d593e97b8e94c10d3ce8f3f72ba6256f96bf6060f08",
         "detection-scripts/patterns/rails-71-patterns.yml": "ac8ee6afcf237820638490aa3a5dfca4f0d87c83b26e0dfaa936ec8f70fbc3fa",
@@ -6062,7 +6158,7 @@
         "examples/simple-upgrade.md": "a5c37651efbd18f692b9ec987a039821b00c169becac47c948264e4fecc59fdf",
         "references/breaking-changes-by-version.md": "9276458f8e9406d91e6b9d722330550d6629439ebe7cd5897be7002516d2d0f0",
         "references/deprecation-warnings.md": "84765787aef2630009029b244cabcdf82c4f7ff8bf5a6e26bc1e2c7ae5776fc0",
-        "references/gem-compatibility.md": "081ae433f06b03c39879cc41f85a234bc9ac955275c701046169b58d22d3b3d3",
+        "references/gem-compatibility.md": "63e3b9beec43a91bd134b4052065b0b6042c46d3db44794d2eba6f5fd7e52540",
         "references/multi-hop-strategy.md": "55d12d71515987e978db6289d02c8079d1cc5be1bc4f14ab88e7c60a50826bfd",
         "references/staying-current.md": "49f8ef618578739fad5ecb697acd912e9cdd255b7ae6ec32e194dbe4e53c7ce0",
         "references/testing-checklist.md": "2233189367c09eb43972926dbdf541e37eeff21dd66ec3410522b3497f52b8e7",
@@ -6071,8 +6167,8 @@
         "version-guides/upgrade-3.2-to-4.0.md": "07dd9f173051ae47d409794b4ba8a14a50138065138d4c524c570acdb2071c52",
         "version-guides/upgrade-4.0-to-4.1.md": "a1d5ce3f4773ef768da75f472ecebfdbc98725bae0eb29d2c0e31bae10c8f85e",
         "version-guides/upgrade-4.1-to-4.2.md": "83f369dc29a10e30746e78ad173a0237d1eb6c98e3734f46ba017fb3a3c343c4",
-        "version-guides/upgrade-4.2-to-5.0.md": "8aa8740a9847f7045a5de8403fa9bbb904dde86d1b29e994f8fc160c116e6f70",
-        "version-guides/upgrade-5.0-to-5.1.md": "c02406694bbf8302fb1367a2b9fb6be57c2650bf4c4f58f3460cf94d6ede2fca",
+        "version-guides/upgrade-4.2-to-5.0.md": "db3411ae06adae4b9c4ee7566bf7fe97e83a58322113f6cc992001e407039cab",
+        "version-guides/upgrade-5.0-to-5.1.md": "7ed717c3dcae52b71f3f1efcf96371a6ed91919f6dc3941be9611baa28092fa3",
         "version-guides/upgrade-5.1-to-5.2.md": "5709acc88bed0c000bd4631cd55c5c80f8a031d170e6844e57e9459481ab640c",
         "version-guides/upgrade-5.2-to-6.0.md": "1cbd62f74ca42138efc4a2780fd49e559f81d2c7602e194b7d3ccea8b113b270",
         "version-guides/upgrade-6.0-to-6.1.md": "bdeff596d2b857589443372f78cc3f10627b384dbb6ed4c6f250810113686710",
@@ -6082,23 +6178,34 @@
         "version-guides/upgrade-7.2-to-8.0.md": "e8cb3ecc786d05df09258f26045cb97dab41b7a3f00a1e749df9cdb690b855e8",
         "version-guides/upgrade-8.0-to-8.1.md": "d41bb990284c62333d61d3f0ffd4c1fc13a866966ded4929cf4fc3fc60b22a90",
         "workflows/app-update-preview-workflow.md": "c1d470f021dc09a29ecceb05cd09792720c09b1ac7be189cff1a9b2cef646621",
-        "workflows/ci-sync-workflow.md": "2f37f00abc154ee8d838dfbf106585dc8dec86c5f61b3151fdcba027e8840ef8",
-        "workflows/direct-detection-workflow.md": "651d6f70654c0c0b4efa635c479e45f6cb6debfef8a06f48f47ad8a774c553eb",
+        "workflows/ci-sync-workflow.md": "1da18e10bb968ffabc6ac9016fd95f4ca955886b31798c2562c19facc35951f6",
+        "workflows/direct-detection-workflow.md": "8f5a81e0bfc4cd6c366f062ad05413e0e3e6a3c8fdd1d17e8dd6a4a788a51ed5",
+        "workflows/gem-compatibility-workflow.md": "f36f1bf317aa3e80e0eb7e75b84f5b9d0683e69a8251de41f4d78c2760475755",
         "workflows/test-suite-verification-workflow.md": "8e3cb4c921725404f0b651ad83709629475a0ac53a3009b057e38b81e6a1dd70",
         "workflows/upgrade-report-workflow.md": "11b322f8683c022ce9601775a6a9e4c930ae2bf95fea728ac7d439952d4eb5db"
       },
-      "bundleHash": "42fca39fcfa3a21d8b8e69b5dc9daf7abf4f0e67c87b4da7d76573722fd1a9b7",
+      "bundleHash": "c169fb5846007fac9965ce6c4719c016a8b77285c180d36e8d379ffd455aaa9e",
       "review": {
         "status": "flagged",
         "flags": [
-          "broad shell commands",
-          "external links without clear necessity",
-          "questionable command naming in 8.1 guide"
+          "Broad shell commands and network calls should be human-reviewed",
+          "Potentially unsafe/changing-system commands shown in examples (e.g., mv, chmod, bundle update, curl to external APIs)",
+          "Minor inconsistency in 8.1 guide: creates bundler-audit script as bin/brakeman"
         ],
-        "summary": "The skill is largely on-topic and safe, but it contains many executable shell commands and one likely mistaken instruction creating `bin/brakeman` for bundler-audit that should be human-reviewed.",
+        "summary": "The skill is on-topic and mostly safe, but it includes broad upgrade commands and external API curl usage that merit a quick human review.",
         "model": "gpt-5.4",
         "promptVersion": "1.0.0",
-        "reviewedAt": "2026-04-30T08:55:16.259Z"
+        "reviewedAt": "2026-05-03T15:50:34.696Z"
+      },
+      "securityCheck": {
+        "status": "warning",
+        "findings": [
+          "Broad shell commands and network calls should be human-reviewed",
+          "Potentially unsafe/changing-system commands shown in examples (e.g., mv, chmod, bundle update, curl to external APIs)",
+          "Minor inconsistency in 8.1 guide: creates bundler-audit script as bin/brakeman"
+        ],
+        "summary": "The skill is on-topic and mostly safe, but it includes broad upgrade commands and external API curl usage that merit a quick human review.",
+        "checkedAt": "2026-05-03T15:50:34.696Z"
       }
     },
     "redis-development": {
@@ -11340,21 +11447,33 @@
     "design-mobile-apps": {
       "source": "sleekdotdesign/agent-skills",
       "skillPath": "sleekdotdesign/agent-skills/design-mobile-apps",
-      "commitSha": "7fc618cb0eb2a23e2752bace1fdadb2627506f46",
+      "commitSha": "a6799c715937b2a2617edaf29c424bb963410e89",
       "files": [
         "SKILL.md"
       ],
       "sha256": {
-        "SKILL.md": "60d9250cabaa179582ba45a4622fd129733fad8dfa3dc8cf02e8cd0586a5b326"
+        "SKILL.md": "add047d108dfe23b577609e7a14159dfcffd57e81e26e57ddab85ca4269974a6"
       },
-      "bundleHash": "f310b9f2139406843450ce75d462fca532acb0a8e8a131b1e9c36217a47a0c4f",
+      "bundleHash": "8ad96e3ae91f09355837322681a0bcb01ab6caadb7a6db663b47bf7185c72ea3",
       "review": {
-        "status": "approved",
-        "flags": [],
-        "summary": "review skipped (--no-review)",
+        "status": "flagged",
+        "flags": [
+          "External host referenced beyond allowed-hosts (api.iconify.design)",
+          "Broad file-writing instruction to save screenshots/component HTML to project directory via shell commands"
+        ],
+        "summary": "Mostly on-topic and safe, but it references an additional external domain not declared in allowed-hosts and includes broad instructions to write fetched content directly to disk.",
         "model": "gpt-5.4",
         "promptVersion": "1.0.0",
-        "reviewedAt": "2026-04-18T04:02:30.084Z"
+        "reviewedAt": "2026-05-03T15:50:30.961Z"
+      },
+      "securityCheck": {
+        "status": "warning",
+        "findings": [
+          "External host referenced beyond allowed-hosts (api.iconify.design)",
+          "Broad file-writing instruction to save screenshots/component HTML to project directory via shell commands"
+        ],
+        "summary": "Mostly on-topic and safe, but it references an additional external domain not declared in allowed-hosts and includes broad instructions to write fetched content directly to disk.",
+        "checkedAt": "2026-05-03T15:50:30.961Z"
       }
     },
     "dart-best-practices": {
@@ -11380,34 +11499,31 @@
     "remotion": {
       "source": "remotion-dev/skills",
       "skillPath": "remotion-dev/skills/remotion",
-      "commitSha": "41a3b0685bc648c5f66b3c81d67c61589875eefb",
+      "commitSha": "8587710e5b919def5bb0e79ce7f016e33fb3bf44",
       "files": [
         "SKILL.md",
         "rules/3d.md",
-        "rules/animations.md",
-        "rules/assets.md",
         "rules/assets/charts-bar-chart.tsx",
         "rules/assets/text-animations-typewriter.tsx",
         "rules/assets/text-animations-word-highlight.tsx",
         "rules/audio-visualization.md",
         "rules/audio.md",
         "rules/calculate-metadata.md",
-        "rules/can-decode.md",
-        "rules/charts.md",
         "rules/compositions.md",
         "rules/display-captions.md",
-        "rules/extract-frames.md",
         "rules/ffmpeg.md",
-        "rules/fonts.md",
         "rules/get-audio-duration.md",
         "rules/get-video-dimensions.md",
         "rules/get-video-duration.md",
         "rules/gifs.md",
+        "rules/google-fonts.md",
+        "rules/html-in-canvas.md",
         "rules/images.md",
         "rules/import-srt-captions.md",
         "rules/light-leaks.md",
+        "rules/local-fonts.md",
         "rules/lottie.md",
-        "rules/maps.md",
+        "rules/mapbox.md",
         "rules/measuring-dom-nodes.md",
         "rules/measuring-text.md",
         "rules/parameters.md",
@@ -11426,36 +11542,33 @@
         "rules/voiceover.md"
       ],
       "sha256": {
-        "SKILL.md": "2e8d90b1490e0b188cd7b3b442f1cdc87a42c887e08cbabdb3941064ef80d91a",
+        "SKILL.md": "bc9de67a9aa04ff61fed86fc41409f2bdc0e078e3ab33263b7dcfcfeef7207d1",
         "rules/3d.md": "42cef6d68fb4a266ab495d35df0c60e03672b0d85c043f9b567f6aa7ff00dd0d",
-        "rules/animations.md": "d9ee77603e83316355788b1418cde5cdb0370efe0be21bb0a66eaa26c3bd26d7",
-        "rules/assets.md": "68b70928aaea682165f33dc8e98278d9dca8512b50e44abc2c884ee5f3ac78de",
         "rules/assets/charts-bar-chart.tsx": "6e5e219c596c8515336570a5bc89c233e32e695d5816dec88eb929e798eeea61",
         "rules/assets/text-animations-typewriter.tsx": "92b5f47d6d18387a0aa008ce9dceefd30f673ae5879e16892bd4b4ea97f5dddb",
         "rules/assets/text-animations-word-highlight.tsx": "30e707bbc90e3734fcdb0f9e869bdb9fbbaf8ded1d923951d616f5ba402ce03d",
         "rules/audio-visualization.md": "0f4043de86639b6390e5ab888eaa66a24a10a8bd540f1443327cb88107eae1e9",
         "rules/audio.md": "e931664ac23bc4acfa137d8b415702bb4860b4fbabd6caed0042c0902d3bec90",
         "rules/calculate-metadata.md": "7d6217deed7425c6662e8d112b933be162a99a9f26a5c10b7c0b2ba62329a269",
-        "rules/can-decode.md": "d2323cc4f2a884a09d167f31a4fcb36bd94adf1002de88b99bd9af1a2bc5ed71",
-        "rules/charts.md": "c6863bd1122f53f80c2211fbe19bc5e3db8a38a5d43473748da8067af10fcf29",
-        "rules/compositions.md": "3223ce9326048ef734fe880e5ddbd33e75e12dc4deb7f6043c58d11329d47f31",
+        "rules/compositions.md": "49fb12d1bb9e9fc68823625e83d43d5f36904593ad738a9d7e5ef97a1230627b",
         "rules/display-captions.md": "20b8898a90536fa427a5a39571fc7deac7bde96c4c7bfdf413eee1ef4ef85530",
-        "rules/extract-frames.md": "771eb211c58130b2e4533dfec87abe584a2070c1d3dd0a0d6f16d2bb85dd237f",
         "rules/ffmpeg.md": "b67ff4e3ce01c48241ef92fa165398d427e9f676ae8e17d1ed19d5584bff5002",
-        "rules/fonts.md": "1749e4cf82e8b157d4b0a26f46721152d3ef9e5e9a1686753b8bb6a1be83ddbc",
         "rules/get-audio-duration.md": "720a5346ae79555e933498995d5cb04d1bfbeeee7232436d8835c3ec17d46281",
         "rules/get-video-dimensions.md": "ed1bb6e0ae742e4bfcb18e7c50af23fc782a9d699b90d367250437c7f6da7304",
         "rules/get-video-duration.md": "ed594a0d73a5274483f21c30e612aba57089d5bbc5437041aa32d07a8e789fd9",
         "rules/gifs.md": "db5d84bb8da4c52c133cdc9820a5b6995db94a548df5f9838efb8d1224065787",
-        "rules/images.md": "833e0a038d7c158f58b39f9bca7efafbbc4b944a54b3ae1c95e0d5973345e22c",
+        "rules/google-fonts.md": "c0860213dfde60dd188a8b7cb1368e2e92fe960584b9ca6340c6cd555fcbd141",
+        "rules/html-in-canvas.md": "217bc4f52cfa2f4a8323a9dac3ba430acac28557707d7993e7e3aa4b092c5748",
+        "rules/images.md": "6a93c05858a842ea380e4a92491fa2ef6e205b184e0d22cd32ae3692f2e27333",
         "rules/import-srt-captions.md": "ad89cc1834dcd63ff225593f699611a1a20b57eff4ed8e587f429b36516ec82c",
         "rules/light-leaks.md": "17d2f136f7bf2f438274a0ade43df017c360ae31175d8367ce476415c222dfca",
+        "rules/local-fonts.md": "51597b528837c3fda45a61241ecb87124dd8b72c191bd06986bfc967bb380f8c",
         "rules/lottie.md": "6dd0a845f5cea9c0f3d2465b5678a16076f5778ad1a628abbf387dba0b929cbb",
-        "rules/maps.md": "5a531e1c925c58c4aa019c33bf2b6c0412560af3359295ab080f33e063e01d61",
+        "rules/mapbox.md": "5a531e1c925c58c4aa019c33bf2b6c0412560af3359295ab080f33e063e01d61",
         "rules/measuring-dom-nodes.md": "4017103b03f14a041ac433be78c521ec2e9961629fae419c8b196d349637585b",
         "rules/measuring-text.md": "5cab1807b9ae9f5be3fc0e1cb0e0513a69451e31e32657d6a665573331db6807",
         "rules/parameters.md": "9de38837a07dc406052dfbb759c58ca5298ca331d86d9aa0f4e177b339e288b5",
-        "rules/sequencing.md": "7c18f2ac36974fd7b85c01efa1135ea06a14e8492dd9fe82ced3bec0b4bb605d",
+        "rules/sequencing.md": "a3c448bfd99a5e7b6c838dab30c8aaf449d4f0732152203b65cf1b49977abb72",
         "rules/sfx.md": "96fcc4f0973b5ed5cd9cd0d4d0479c642984cfacd8010fc7d6186c468296626b",
         "rules/silence-detection.md": "ed95d46d078f3749b87ec3c6e25c1c5b0c8485fdcb41156d649266369748fdc2",
         "rules/subtitles.md": "9f18ec4a9c88adf35d51b44aaf344442443fd687a4dc948366ebb683fc3ecd30",
@@ -11469,14 +11582,28 @@
         "rules/videos.md": "d9d3032a57f92c759daf0bd60b3282f6810ecc9958e9093a6b828de623b05328",
         "rules/voiceover.md": "60340034cf422052007183d031171b3c88422dd3fe85f0d915283dd8ec5df3e8"
       },
-      "bundleHash": "56574b31f3f9433658e1aa00af0722a20000cb816d9b5d430a72a4d87dd80208",
+      "bundleHash": "00b6ae6385bbf5d1f401c40dc301697f10ae39e0226283f3c1ba2583a1f421f6",
       "review": {
-        "status": "approved",
-        "flags": [],
-        "summary": "review skipped (--no-review)",
+        "status": "flagged",
+        "flags": [
+          "embedded secret pattern in example (.env token assignment)",
+          "suspicious hidden character in Mapbox style URL",
+          "external links to third-party resources should be reviewed"
+        ],
+        "summary": "Mostly safe Remotion guidance, but it includes a token-in-.env example, a likely hidden Unicode character in a Mapbox URL, and several external URLs that warrant human review.",
         "model": "gpt-5.4",
         "promptVersion": "1.0.0",
-        "reviewedAt": "2026-04-18T04:02:35.966Z"
+        "reviewedAt": "2026-05-03T15:50:32.048Z"
+      },
+      "securityCheck": {
+        "status": "warning",
+        "findings": [
+          "embedded secret pattern in example (.env token assignment)",
+          "suspicious hidden character in Mapbox style URL",
+          "external links to third-party resources should be reviewed"
+        ],
+        "summary": "Mostly safe Remotion guidance, but it includes a token-in-.env example, a likely hidden Unicode character in a Mapbox URL, and several external URLs that warrant human review.",
+        "checkedAt": "2026-05-03T15:50:32.048Z"
       }
     },
     "best-practices": {
@@ -12593,7 +12720,7 @@
     "swift-concurrency": {
       "source": "avdlee/swift-concurrency-agent-skill",
       "skillPath": "avdlee/swift-concurrency-agent-skill/swift-concurrency",
-      "commitSha": "eba0d5563f68bf76d132c894613f90ea0d4bfcf1",
+      "commitSha": "a73e4f9917bb8b8d35a7af7b89afd19b6ebd634e",
       "files": [
         "SKILL.md",
         "references/_index.md",
@@ -12613,7 +12740,7 @@
         "references/threading.md"
       ],
       "sha256": {
-        "SKILL.md": "a9f7e787f0a7e265def0469e20ae757ed27e73ff4a0a6626c6350ecf4e3d119f",
+        "SKILL.md": "fcd3906b431f9b6e72dbf1aa844f8f4e1e7ab3073e3a94f8cb350fd8e210d906",
         "references/_index.md": "73716755b10ccd00a6b4c8cab6c6845b342d3dd59dff1fe2398c6555f62d2315",
         "references/actors.md": "d0bd0e0bf374ac570f60c1900786aca42b076e7d062a5e7bc52db537abc8dc1f",
         "references/async-algorithms.md": "9e16790e9b81850a37b3de995220074491f3efd5accab1f5daa0a633625fed40",
@@ -12630,14 +12757,26 @@
         "references/testing.md": "3df9e839b3338dd473115d9ac8787a42d91b50a537fe40c55cf66d21034679db",
         "references/threading.md": "778d1deca30fc68dc22541c8b8b81e2fcb651267680d4344e1267ee9c296ad55"
       },
-      "bundleHash": "addf8a1257ed5a245cf7195e759d59aa88c020b2caa5f9251e1f7eae11db2f39",
+      "bundleHash": "a0b5e654e8daf0cfef5bad9ea33002a225d7b6dfa68b40dc0d061dd274f7eb02",
       "review": {
-        "status": "approved",
-        "flags": [],
-        "summary": "review skipped (--no-review)",
+        "status": "flagged",
+        "flags": [
+          "External links with marketing/telemetry query parameters",
+          "Minor off-topic promotional course references throughout skill files"
+        ],
+        "summary": "The skill is largely safe and on-topic, but it contains repeated external promotional links with UTM/tracking parameters that should be human-reviewed.",
         "model": "gpt-5.4",
         "promptVersion": "1.0.0",
-        "reviewedAt": "2026-04-18T05:16:51.695Z"
+        "reviewedAt": "2026-05-03T15:50:33.472Z"
+      },
+      "securityCheck": {
+        "status": "warning",
+        "findings": [
+          "External links with marketing/telemetry query parameters",
+          "Minor off-topic promotional course references throughout skill files"
+        ],
+        "summary": "The skill is largely safe and on-topic, but it contains repeated external promotional links with UTM/tracking parameters that should be human-reviewed.",
+        "checkedAt": "2026-05-03T15:50:33.472Z"
       }
     },
     "xcode-build-orchestrator": {
@@ -12767,7 +12906,7 @@
     "pr_review": {
       "source": "angular/angular",
       "skillPath": "angular/angular/pr_review",
-      "commitSha": "a0d45639a9f2d8c30e4a69c5ed875d1fc7647b46",
+      "commitSha": "c84642ac16bf3588c071bbdcc684daa8d4e494b3",
       "files": [
         "SKILL.md",
         "reference/router.md",
@@ -12778,7 +12917,7 @@
         "scripts/submit_pr_review.sh"
       ],
       "sha256": {
-        "SKILL.md": "dc3a1d8cb5d078092de406e44a80b978f8c2c5471869acbea2d3dd7cb632a1a9",
+        "SKILL.md": "3daee0ee39f14160339670d83bbf384d8387c4019bd8baf766e2b5ca632d1d2f",
         "reference/router.md": "ef8d31916a99f23be556a93b97e82c6f88c16623f8c2c75ee86522f7c6e85b61",
         "scripts/determine_review_type.sh": "30c4ab8eb0d585b2aad40f8cc7d4beecbd367926c559f786cb2a6a243a4352d6",
         "scripts/get_pr_comments.sh": "ed0bfc671973e59993b9eea79366930f9ac080215efd5b4bf6843f2f3b8913bd",
@@ -12786,14 +12925,20 @@
         "scripts/reply_pr_comment.sh": "e4411b5712683bcad6eef794da4457471f15bd40826295d9950b958fdabbe0da",
         "scripts/submit_pr_review.sh": "082f9a3795ccb5518c3e9c5990dc0724f57c3d6699e91e84af30ae6451228fc1"
       },
-      "bundleHash": "821975f20a0647c1f2f979db7d9c3a02a32df86f5e043af3562bc0931e9bae3c",
+      "bundleHash": "7fe60167662a2a7df0f81af064d22298cffe1a13164f250f75cac8d71a452cfd",
       "review": {
         "status": "approved",
         "flags": [],
-        "summary": "review skipped (--no-review)",
+        "summary": "The skill content is on-topic PR review guidance and tool usage instructions without prompt injection, secrets, suspicious links, or destructive commands.",
         "model": "gpt-5.4",
         "promptVersion": "1.0.0",
-        "reviewedAt": "2026-04-18T05:19:34.433Z"
+        "reviewedAt": "2026-05-03T15:46:50.340Z"
+      },
+      "securityCheck": {
+        "status": "ok",
+        "findings": [],
+        "summary": "The skill content is on-topic PR review guidance and tool usage instructions without prompt injection, secrets, suspicious links, or destructive commands.",
+        "checkedAt": "2026-05-03T15:46:50.340Z"
       }
     },
     "bash-defensive-patterns": {
