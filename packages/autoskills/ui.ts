@@ -125,10 +125,12 @@ export function multiSelect<T>(
       }
     }
 
-    const separatorCount = groupCount > 1 ? groupCount - 1 : 0;
+    const showGroups = groupCount > 1;
+    const visibleGroupCount = showGroups ? groupCount : 0;
+    const separatorCount = showGroups ? groupCount - 1 : 0;
 
     function renderedLineCount(): number {
-      return items.length + groupCount + separatorCount + 1;
+      return items.length + visibleGroupCount + separatorCount + 1;
     }
 
     function clearRendered(): void {
@@ -149,7 +151,7 @@ export function multiSelect<T>(
       let isFirstGroup = true;
 
       for (let i = 0; i < items.length; i++) {
-        if (groupFn) {
+        if (showGroups && groupFn) {
           const group = groupFn(items[i]);
           if (group !== lastGroup) {
             if (!isFirstGroup) write("\n");
